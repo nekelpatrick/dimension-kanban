@@ -12,12 +12,12 @@ export const {
 } = createStitches({
   theme: {
     colors: {
+      gray500: "#DFE1E4",
+
       brandPrimary500: "#4734FE",
       brandSucess500: "#78C552",
 
-      // neutralBlack: "#111118",
-      neutralBlack: "#78C552",
-
+      neutralBlack: "#111118",
       neutralWhite: "#FFFFFF",
     },
   },
