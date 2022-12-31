@@ -22,7 +22,6 @@ export const globalStyles = globalCss({
 export const Container = styled("div", {
   maxWidth: "$container",
   margin: "0 auto",
-  padding: "0 1rem",
 
   "@tablet": {
     maxWidth: "$containerTablet",
