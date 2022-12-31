@@ -1,89 +1,123 @@
 [
- {
-     "name":"TODO",
-     "items": [
-         {
-             "id":1,
-             "priority": 0,
-             "title": "UX Adjustments",
-             "chat": 1,
-             "attachment": 2,
-             "assignees": [
-                 {
-                     "avt": "https://randomuser.me/api/portraits/men/75.jpg"
-                 }
-             ]
-         },
-         {
-             "id":2,
-             "priority": 2,
-             "title": "Moodboards",
-             "chat": 10,
-             "attachment": 4,
-             "assignees": [
-                 {
-                     "avt": "https://randomuser.me/api/portraits/men/67.jpg"
-                 }
-             ]
-         }
-     ]
- },
- {
-     "name":"IN PROGRESS",
-     "items": [
-         {
-             "id":3,
-             "priority": 1,
-             "title": "Dashboard Design",
-             "chat": 0,
-             "attachment": 3,
-             "assignees": [
-                 {
-                     "avt": "https://randomuser.me/api/portraits/men/79.jpg"
-                 }
-             ]
-         }
-     ]
- },
- {
-     "name":"COMPLETED",
-     "items": [
-         {
-             "id":4,
-             "priority": 2,
-             "title": "Design System",
-             "chat": 13,
-             "attachment": 2,
-             "assignees": [
-                 {
-                     "avt": "https://randomuser.me/api/portraits/men/75.jpg"
-                 }
-             ]
-         },
-         {
-             "id":5,
-             "priority": 0,
-             "title": "Presentation",
-             "chat": 0,
-             "attachment": 0,
-             "assignees": [
-                 {
-                     "avt": "https://randomuser.me/api/portraits/men/68.jpg"
-                 }
-             ]
-         }, {
-            "id":6,
-            "priority": 0,
-            "title": "Brainstorming",
-            "chat": 13,
-            "attachment": 2,
-            "assignees": [
-                {
-                    "avt": "https://randomuser.me/api/portraits/men/75.jpg"
-                }
-            ]
-        }
-     ]
- }
+  {
+    "name": "TODO",
+    "items": [
+      {
+        "id": 1,
+        "title": "UX Adjustments",
+        "description": "Make UI/UX revisions for the project management dashboard on Figma.",
+        "embedImage": "",
+        "tag": "Research",
+        "assignees": [
+          {
+            "avt": "https://randomuser.me/api/portraits/men/40.jpg",
+            "avt": "https://randomuser.me/api/portraits/men/50.jpg"
+          }
+        ],
+        "chat": 3
+      },
 
+      {
+        "id": 4,
+        "title": "Design System",
+        "description": "Create a consistent look and feel both on web and mobile",
+        "embedImage": "",
+        "tag": "UI Design",
+        "assignees": [
+          {
+            "avt": "https://randomuser.me/api/portraits/men/40.jpg"
+          }
+        ],
+        "chat": 12,
+        "checkMarkCurrent": 4,
+        "checkMarkGoal": 8,
+        "date": "May 20",
+        "done": false
+      }
+    ]
+  },
+  {
+    "name": "In Progress",
+    "items": [
+      {
+        "id": 2,
+        "title": "Moodboards",
+        "description": "",
+        "embedImage": "https://picsum.photos/200/300",
+        "tag": "UI Design",
+        "assignees": [
+          {
+            "avt": "https://randomuser.me/api/portraits/men/40.jpg",
+            "avt": "https://randomuser.me/api/portraits/men/40.jpg"
+          }
+        ],
+        "chat": 2,
+        "checkMarkCurrent": "",
+        "checkMarkGoal": "",
+        "attachment": 2,
+        "date": "Nov 23",
+        "done": false
+      },
+      {
+        "id": 3,
+        "title": "Dashboard Design",
+        "description": "",
+        "embedImage": "https://picsum.photos/200/300",
+        "tag": "UI Design",
+        "assignees": [
+          {
+            "avt": "https://randomuser.me/api/portraits/men/40.jpg",
+            "avt": "https://randomuser.me/api/portraits/men/40.jpg",
+            "avt": "https://randomuser.me/api/portraits/men/40.jpg"
+          }
+        ],
+        "chat": 5,
+        "checkMarkCurrent": 4,
+        "checkMarkGoal": 8,
+        "attachment": 1,
+        "date": "Jun 20",
+        "done": false
+      }
+    ]
+  },
+  {
+    "name": "Completed",
+    "items": [
+      {
+        "id": 5,
+        "title": "Presentation",
+        "description": "Help business to clearly define their anuual e-commerce digital strategy by creating a high-level plan.",
+        "embedImage": "",
+        "tag": "Planning",
+        "assignees": [
+          {
+            "avt": "https://randomuser.me/api/portraits/men/75.jpg"
+          }
+        ],
+        "chat": 11,
+        "checkMarkCurrent": "",
+        "checkMarkGoal": "",
+        "date": "",
+        "done": true
+      },
+      {
+        "id": 6,
+        "title": "Brainstorming",
+        "description": "",
+        "embedImage": "",
+        "tag": "Research",
+        "assignees": [
+          {
+            "avt": "https://randomuser.me/api/portraits/men/75.jpg",
+            "avt": "https://randomuser.me/api/portraits/men/77.jpg"
+          }
+        ],
+        "chat": 12,
+        "checkMarkCurrent": "",
+        "checkMarkGoal": "",
+        "date": "",
+        "done": true
+      }
+    ]
+  }
 ]
