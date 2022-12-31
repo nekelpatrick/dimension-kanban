@@ -1,0 +1,89 @@
+[
+ {
+     "name":"TODO",
+     "items": [
+         {
+             "id":1,
+             "priority": 0,
+             "title": "UX Adjustments",
+             "chat": 1,
+             "attachment": 2,
+             "assignees": [
+                 {
+                     "avt": "https://randomuser.me/api/portraits/men/75.jpg"
+                 }
+             ]
+         },
+         {
+             "id":2,
+             "priority": 2,
+             "title": "Moodboards",
+             "chat": 10,
+             "attachment": 4,
+             "assignees": [
+                 {
+                     "avt": "https://randomuser.me/api/portraits/men/67.jpg"
+                 }
+             ]
+         }
+     ]
+ },
+ {
+     "name":"IN PROGRESS",
+     "items": [
+         {
+             "id":3,
+             "priority": 1,
+             "title": "Dashboard Design",
+             "chat": 0,
+             "attachment": 3,
+             "assignees": [
+                 {
+                     "avt": "https://randomuser.me/api/portraits/men/79.jpg"
+                 }
+             ]
+         }
+     ]
+ },
+ {
+     "name":"COMPLETED",
+     "items": [
+         {
+             "id":4,
+             "priority": 2,
+             "title": "Design System",
+             "chat": 13,
+             "attachment": 2,
+             "assignees": [
+                 {
+                     "avt": "https://randomuser.me/api/portraits/men/75.jpg"
+                 }
+             ]
+         },
+         {
+             "id":5,
+             "priority": 0,
+             "title": "Presentation",
+             "chat": 0,
+             "attachment": 0,
+             "assignees": [
+                 {
+                     "avt": "https://randomuser.me/api/portraits/men/68.jpg"
+                 }
+             ]
+         }, {
+            "id":6,
+            "priority": 0,
+            "title": "Brainstorming",
+            "chat": 13,
+            "attachment": 2,
+            "assignees": [
+                {
+                    "avt": "https://randomuser.me/api/portraits/men/75.jpg"
+                }
+            ]
+        }
+     ]
+ }
+
+]
