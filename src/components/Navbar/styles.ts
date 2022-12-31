@@ -29,10 +29,10 @@ export const Navbar = styled("nav", {
 
 export const LogoMark = styled(Flex, {
   alignItems: "center",
-  paddingLeft: "16px",
+  paddingLeft: "6px",
   borderRight: "1px solid $gray550",
-  padding: "0 24px 11px 0",
-  marginLeft: "9px",
+  padding: "0 16px 11px 0",
+  marginLeft: "16px",
 });
 
 export const NavbarLinks = styled(Flex, {
