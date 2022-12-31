@@ -1,6 +1,6 @@
 import type { AppProps } from "next/app";
 import Image from "next/image";
-import { NavBar } from "../components/NavBar";
+import { NavBar } from "../components/Navbar";
 import { Products } from "../components/Products";
 
 import { Container, globalStyles } from "../styles/Global";
