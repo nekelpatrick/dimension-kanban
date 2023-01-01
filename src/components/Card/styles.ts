@@ -17,8 +17,8 @@ export const Card = styled("div", {
   order: 0,
   alignSelf: "stretch",
   flexGrow: 0,
-  margin: "-70px 0px",
   zIndex: 1,
+  margin: "24px 0 0 24px",
 });
 
 export const ProductCode = styled("div", {});
