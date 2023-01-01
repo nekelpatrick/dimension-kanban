@@ -14,9 +14,12 @@ export const {
     colors: {
       gray700: "#F4F4F4",
       gray600: "#F5F5F5",
+      gray590: "#EEEEEE",
       gray550: "#EAEDF0",
       gray500: "#DFE1E4",
       gray400: "#6C6F75",
+      gray200: "#282A2F",
+
       brandPrimary500: "#4734FE",
       brandSucess500: "#78C552",
 
