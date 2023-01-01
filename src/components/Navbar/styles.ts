@@ -6,7 +6,7 @@ export const Navbar = styled("nav", {
   position: "fixed",
   inset: 0,
   bottom: "auto",
-  padding: "1rem 0",
+  padding: "17px 0 17px 0",
   width: "100%",
   zIndex: "99999",
   borderBottom: "1px solid $gray600",
@@ -28,14 +28,14 @@ export const Navbar = styled("nav", {
 });
 
 export const LogoMark = styled(Flex, {
-  alignItems: "center",
   paddingLeft: "6px",
   borderRight: "1px solid $gray550",
   padding: "0 16px 11px 0",
-  marginLeft: "16px",
+  marginLeft: "17px",
+  marginRight: "24px",
 });
 
-export const NavbarLinks = styled(Flex, {
+export const NavbarLinksArea = styled(Flex, {
   "@mobile": {
     marginTop: "$3",
     flexDirection: "column",
@@ -51,4 +51,33 @@ export const NavbarLinks = styled(Flex, {
 export const NavbarMobileArea = styled("div", {
   display: "flex",
   justifyContent: "space-between",
+});
+
+export const InputArea = styled("div", {
+  all: "unset",
+  width: 175,
+  height: 32,
+  marginRight: "12px",
+
+  backgroundColor: "$gray600",
+  color: "$gray400",
+
+  display: "inline-flex",
+
+  alignItems: "center",
+  justifyContent: "center",
+
+  borderRadius: "8px",
+  fontSize: 15,
+  lineHeight: 1,
+
+  "&:hover": { boxShadow: `0 0 0 2px black` },
+});
+
+export const Input = styled("input", {
+  all: "unset",
+  backgroundColor: "$gray600",
+  color: "$gray400",
+
+  fontSize: "12px",
 });

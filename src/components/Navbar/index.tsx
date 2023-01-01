@@ -2,23 +2,43 @@ import { Button } from "../../styles/Button";
 
 import Image from "next/image";
 
-import { Navbar, LogoMark, NavbarLinks } from "./styles";
+import { Navbar, LogoMark, NavbarLinksArea, InputArea, Input } from "./styles";
+
+import React from "react";
+import { styled } from "@stitches/react";
+import { MagnifyingGlass, Notebook } from "phosphor-react";
 
 export const NavBar = (): JSX.Element => {
   return (
     <Navbar>
-      <NavbarLinks>
+      <NavbarLinksArea>
         <LogoMark>
           <Image width={23} height={31} src={"/images/logoMark.png"} alt="" />
         </LogoMark>
-        <a href="">Projects</a> <span>&gt;</span>
-        <a href="">Cloud Platform</a>
-        <span>FLYTE</span>
-      </NavbarLinks>
-      <NavbarLinks>
-        <input type="text" defaultValue="Search" />
-        <Button type="primary">.</Button>
-      </NavbarLinks>
+        <NavbarLinksArea>
+          <Button type="navigationLinkCurrent">Projects</Button>
+          <span
+            style={{
+              color: "#6C6F75",
+              height: "16px",
+              margin: "0 4.63px 3px 4.82px",
+            }}
+          >
+            &gt;
+          </span>
+          <Button type="navigationLink">Cloud Platform</Button>
+          <Button type="tag">FLYTE</Button>
+        </NavbarLinksArea>
+      </NavbarLinksArea>
+      <NavbarLinksArea>
+        <InputArea>
+          <MagnifyingGlass style={{ margin: 8 }} size={16} weight="bold" />
+          <Input type="text" id="search" defaultValue="Search" />
+        </InputArea>
+        <Button type="sideButton">
+          <Notebook size={16} />
+        </Button>
+      </NavbarLinksArea>
     </Navbar>
   );
 };
