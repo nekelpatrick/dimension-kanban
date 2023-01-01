@@ -1,33 +1,15 @@
 import { styled } from "../styles/index";
 
 export const Button = styled("button", {
-  height: "3rem",
-  appearance: "none",
-  fontWeight: "500",
-  padding: "0 1rem",
-  border: "2px solid $neutralWhite",
-  borderRadius: "$1",
-  cursor: "pointer",
-  fontSize: "1rem",
-  fontFamily: "$texts",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  width: "max-content",
-  whiteSpace: "nowrap",
+  all: "unset",
   textDecoration: "none",
+  cursor: "pointer",
+
+  fontSize: "1rem",
+
   margin: "2px",
-
-  // position: absolute;
-  // width: 57px;
-  // height: 30px;
-  // left: 154px;
-  // top: 61px;
-
-  // background: #FFFFFF;
-  // border: 1px solid #DFE1E4;
-  // box-shadow: 0px 3px 0px #DFE1E4;
-  // border-radius: 8px;
+  whiteSpace: "nowrap",
+  width: "max-content",
 
   variants: {
     type: {
@@ -82,6 +64,37 @@ export const Button = styled("button", {
 
         backgroundColor: "$gray600",
         margin: "8px",
+      },
+      navigationLinkCurrent: {
+        color: "$gray200",
+        textDecoration: "none",
+      },
+      navigationLink: {
+        color: "$gray400",
+        textDecoration: "none",
+      },
+      tag: {
+        margin: "6px",
+        width: "45px",
+        height: "20px",
+        borderRadius: "5px",
+        padding: "3px 6px ",
+        textAlign: "center",
+
+        backgroundColor: "$gray590",
+        color: "$gray400",
+        fontWeight: "400",
+      },
+      sideButton: {
+        display: "flex",
+        height: "32px",
+        width: "32px",
+        marginRight: "24px",
+
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: "8px",
+        border: "1px solid $gray500",
       },
     },
   },
