@@ -23,5 +23,9 @@ export const {
       neutralBlack: "#111118",
       neutralWhite: "#FFFFFF",
     },
+    fonts: {
+      titles: "GT Walsheim pro, sans-serif;",
+      texts: '"GT Walsheim pro", sans-serif',
+    },
   },
 });
