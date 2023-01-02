@@ -20,7 +20,6 @@ export const ToolbarComponent = () => {
 
   function toggleIsList() {
     setIsList(!isList);
-    console.log(isList);
   }
 
   return (

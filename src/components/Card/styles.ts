@@ -26,9 +26,9 @@ export const Card = styled("div", {
   transition: "transform 0.3s ease",
 
   "&:active": {
-    transform: "rotate(3deg)",
-    zIndex: 999,
-    boxShadow: "0 0 0 2px black,",
+    // transform: "rotate(3deg)",
+    // zIndex: 999,
+    // boxShadow: "0 0 0 2px black,",
   },
 });
 

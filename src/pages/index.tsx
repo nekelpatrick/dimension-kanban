@@ -11,6 +11,8 @@ import {
   InputNewCard,
 } from "../styles/pages/home";
 
+import { resetServerContext } from "react-beautiful-dnd";
+
 import { CardComponent } from "../components/Card";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 
@@ -45,6 +47,8 @@ interface Item {
 }
 
 export function Home() {
+  resetServerContext();
+
   const [selectedBoard, setSelectedBoard] = useState(0);
   const [boardData, setBoardData] = useState(BoardData);
   const [showForm, setShowForm] = useState(false);
@@ -82,7 +86,6 @@ export function Home() {
 
     // get the item being dragged
     const dragItem = currentBoardData[sourceIdNum].items[sourceIndex];
-    console.log(dragItem);
 
     // remove the item from the source location
     currentBoardData[sourceIdNum].items.splice(sourceIndex, 1);
@@ -414,12 +417,11 @@ export function Home() {
 
                   <BoardCardsArea>
                     {board.items.length > 0 &&
-                      board.items.map((item, iIndex) => (
+                      board.items.map((item, Index) => (
                         <CardComponent
                           key={item.id}
                           data={item}
-                          index={iIndex}
-                          className="m-3"
+                          index={Index}
                         />
                       ))}
                     {provided.placeholder}
