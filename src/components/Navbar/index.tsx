@@ -32,7 +32,7 @@ export const NavBar = (): JSX.Element => {
       <NavbarLinksArea>
         <InputArea>
           <MagnifyingGlass style={{ margin: 8 }} size={16} weight="bold" />
-          <Input type="text" id="search" defaultValue="Search" />
+          <Input type="text" id="search" placeholder="Search" />
         </InputArea>
         <Button type="sideButton">
           <Notebook size={16} />
