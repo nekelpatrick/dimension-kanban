@@ -37,9 +37,9 @@ export const BoardColumn = styled("div", {
   overflow: "hidden",
   height: "600px",
   margin: "0 30px 0 24px",
-
   "&.isDraggingOver": {
-    backgroundColor: "$green-100",
+    borderRadius: "12px",
+    backgroundColor: "#F7F9FA",
   },
 });
 
