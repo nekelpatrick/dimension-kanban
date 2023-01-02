@@ -21,7 +21,62 @@ export const Card = styled("div", {
   margin: "24px 0 0 24px",
 });
 
-export const ProductCode = styled("div", {});
+export const ProductCode = styled("div", {
+  fontWeight: "400",
+  fontSize: "10px",
+  lineHeight: "24px",
+  letterSpacing: "0.6px",
+  color: "#7F8995",
+});
+
+export const CardContent = styled("div", {});
+
+export const CardDescription = styled("p", {
+  fontWeight: "400",
+  fontSize: "12px",
+  lineHeight: "16px",
+  letterSpacing: "0.2px",
+  color: "#7f8995",
+});
+
+export const CardTag = styled("label", {
+  variants: {
+    color: {
+      green: {
+        background: "#F1F9EE",
+        color: "#78c552",
+      },
+      violet: {
+        background: "#EDEBFF",
+        color: "#8478FE",
+      },
+      blue: {
+        background: "#EAF0FF",
+        color: "#2F6BFE",
+      },
+    },
+  },
+
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: "4px 8px",
+  gap: "8px",
+
+  width: "69px",
+  height: "24px",
+
+  background: "$gray500",
+  borderRadius: "6px",
+});
+
+export const CardTagText = styled("p", {
+  fontWeight: "700",
+  fontSize: "12px",
+  lineHeight: "16px",
+  letterSpacing: "0.2px",
+});
 
 export const CardFooter = styled("div", {});
 
@@ -32,10 +87,11 @@ export const AvatarRoot = styled(AvatarPrimitive.Root, {
   verticalAlign: "middle",
   overflow: "hidden",
   userSelect: "none",
-  width: 45,
-  height: 45,
+  width: 30,
+  height: 30,
   borderRadius: "100%",
   backgroundColor: "white",
+  border: "1px solid #FFFFFF",
 });
 
 export const AvatarImage = styled(AvatarPrimitive.Image, {

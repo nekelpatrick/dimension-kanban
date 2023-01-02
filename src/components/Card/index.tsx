@@ -1,6 +1,15 @@
 import { Draggable } from "react-beautiful-dnd";
 
-import { AvatarRoot, Card, CardFooter, ProductCode } from "./styles";
+import {
+  AvatarRoot,
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardTag,
+  CardTagText,
+  ProductCode,
+} from "./styles";
 
 import Image from "next/image";
 import { BsChatDots, BsLink, BsCheckCircle } from "react-icons/bs";
@@ -16,21 +25,54 @@ export const CardComponent = ({ data, index }: any) => {
           {...provided.draggableProps}
           {...provided.dragHandleProps}
         >
-          <ProductCode>FLYTE</ProductCode>
-          <h5>{data.title}</h5>
-          {data.description}
-          <label>{data.tag}</label>
+          <ProductCode>FLYTE-{data.id}</ProductCode>
+
+          {/* Card Content */}
+          <CardContent>
+            <h5>{data.title}</h5>
+            <CardDescription>{data.description}</CardDescription>
+
+            {data.tag.toLocaleLowerCase() == "research" ? (
+              <CardTag color="violet">
+                <CardTagText>{data.tag}</CardTagText>
+              </CardTag>
+            ) : null}
+
+            {data.tag.toLocaleLowerCase() == "ui design" ? (
+              <CardTag color="blue">
+                <CardTagText>{data.tag}</CardTagText>
+              </CardTag>
+            ) : null}
+
+            {data.tag.toLocaleLowerCase() == "planning" ? (
+              <CardTag color="green">
+                <CardTagText>{data.tag}</CardTagText>
+              </CardTag>
+            ) : null}
+          </CardContent>
+
+          {/* CardFooter */}
           <CardFooter>
             {data.chat ? (
               <>
-                <BsChatDots />
+                <Image
+                  src={"/static/cards/chatIcon.svg"}
+                  height={16}
+                  width={16}
+                  alt=""
+                />
                 <span>{data.chat} </span>
               </>
             ) : null}
 
             {data.checkMarkCurrent ? (
               <>
-                <BsCheckCircle />
+                <Image
+                  src={"/static/cards/checkMarkIcon.svg"}
+                  height={16}
+                  width={16}
+                  alt=""
+                />
                 <span>
                   {data.checkMarkCurrent}/{data.checkMarkGoal}
                 </span>
@@ -38,7 +80,12 @@ export const CardComponent = ({ data, index }: any) => {
             ) : null}
             {data.attachment ? (
               <>
-                <BsLink />
+                <Image
+                  src={"/static/cards/linkIcon.svg"}
+                  height={16}
+                  width={16}
+                  alt=""
+                />
                 <span>{data.attachment} </span>
               </>
             ) : null}
