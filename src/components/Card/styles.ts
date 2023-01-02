@@ -9,7 +9,7 @@ export const Card = styled("div", {
   padding: "34px 0px 12px 0",
   // gap: "12px",
   width: "244px",
-  maxHeight: "238px",
+  maxHeight: "260px",
   background: "#FFFFFF",
   border: "1px solid #EAEDF0",
   borderRadius: "12px",
@@ -18,7 +18,7 @@ export const Card = styled("div", {
   alignSelf: "stretch",
   flexGrow: 0,
   zIndex: 1,
-  margin: "24px 0 0 24px",
+  margin: "24px 0 24px 0",
 });
 
 export const ProductCode = styled("div", {

@@ -13,14 +13,14 @@ export const HomeContainer = styled("main", {
 
 export const ColumnArea = styled("div", {
   display: "flex",
-  height: "700px",
+  maxHeight: "800px",
 });
 
 export const BoardCardsArea = styled("div", {
   overflowY: "auto",
   overflowX: "hidden",
-  height: "600px",
-  maxHeight: "calc(100vh - 290px)",
+  // height: "600px",
+  // maxHeight: "calc(100vh - 290px)",
 });
 
 export const BoardColumn = styled("div", {
@@ -28,7 +28,7 @@ export const BoardColumn = styled("div", {
   flexDirection: "column",
   alignItems: "center",
 
-  maxWidth: "244px",
+  // maxWidth: "2px",
 
   backgroundColor: "$gray-100",
   borderRadius: "$md",
