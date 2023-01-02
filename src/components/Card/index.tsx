@@ -19,22 +19,36 @@ import Image from "next/image";
 import * as AvatarPrimitive from "@radix-ui/react-avatar";
 
 export const CardComponent = ({ data, index }: any) => {
+  const getItemStyle = (isDragging: boolean, draggableStyle: any) => ({
+    // some basic styles to make the items look a bit nicer
+    userSelect: "none",
+
+    // change background colour if dragging
+    background: isDragging ? "#F4F4F4" : "#FFFFFF",
+    transform: "rotate(3deg)",
+    zIndex: 999,
+    boxShadow: "0 0 0 2px black,",
+
+    // styles we need to apply on draggables
+    ...draggableStyle,
+  });
+
   return (
     <Draggable index={index} draggableId={data.id.toString()}>
-      {(provided: any) => (
+      {(provided: any, snapshot: any) => (
         <Card
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
+          style={getItemStyle(
+            snapshot.isDragging,
+            provided.draggableProps.style
+          )}
         >
           {/* Card Content */}
           <CardContent>
             <ProductCode>FLYTE-{data.id}</ProductCode>
             <h5 style={{ margin: "0 0 6px 0" }}>{data.title}</h5>
-
-            {data.embedImage ? (
-              <Image src={data.embedImage} width={212} height={88} alt="" />
-            ) : null}
 
             <CardDescription>{data.description}</CardDescription>
             <TagAssign
