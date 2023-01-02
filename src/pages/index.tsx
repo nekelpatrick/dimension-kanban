@@ -26,7 +26,7 @@ import {
 import { Flex } from "../styles/Global";
 import { BiBorderRadius } from "react-icons/bi";
 import Image from "next/image";
-import { Button } from "../styles/Button";
+import { AddCardButton, Button } from "../styles/Button";
 
 function createGuidId() {
   return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
@@ -431,14 +431,15 @@ export function Home() {
                       />
                     </AddNewCard>
                   ) : (
-                    <AddTaskButton
+                    <AddCardButton
                       onClick={() => {
                         setSelectedBoard(bIndex);
                         setShowForm(true);
                       }}
                     >
+                      <Plus color="#4734FE" size={18} weight="bold" />
                       <span>Add task</span>
-                    </AddTaskButton>
+                    </AddCardButton>
                   )}
                 </BoardColumn>
               )}

@@ -154,3 +154,23 @@ export const ButtonToggleAdd = styled(Toggle.Root, {
   "&[data-state=on]": {},
   "&:focus": { backgroundColor: "$violet500", border: "1px solid $violet100" },
 });
+
+export const AddCardButton = styled("button", {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  padding: "8px 16px",
+  gap: "16px",
+
+  width: "244px",
+  height: "40px",
+
+  background: "#FFFFFF",
+  border: "1px solid #EAEDF0",
+  borderRadius: "8px",
+
+  " > * ": {
+    color: "#4734FE",
+    fontWeight: "700",
+  },
+});
