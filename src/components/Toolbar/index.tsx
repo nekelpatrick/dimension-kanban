@@ -26,7 +26,7 @@ export const ToolbarComponent = () => {
       <ToolbarToggleGroup type="multiple" aria-label="Text formatting">
         <Button type="primary">
           <span>
-            <Cloud color="#58B2CB" weight="fill" /> 25%
+            <Cloud color="#58B2CB" weight="fill" /> 25&#37;
           </span>
         </Button>
         <Button type="primary">Filter</Button>
@@ -55,6 +55,9 @@ export const ToolbarComponent = () => {
           <SwitchButton onClick={toggleIsList}>
             <span
               style={{
+                margin: "0",
+                padding: "0",
+
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -90,11 +93,11 @@ export const ToolbarComponent = () => {
         )}
         {/*  */}
         <Button type="primary">
-          <Headphones />
+          <Headphones weight="bold" />
         </Button>
         <Button type="primary">
           <span>
-            <Link /> Share
+            <Link weight="bold" /> Share
           </span>
         </Button>
       </ToolbarToggleGroup>

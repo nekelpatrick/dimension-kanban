@@ -23,7 +23,7 @@ export const Button = styled("button", {
         fontFamily: "GT Walsheim Pro",
 
         width: "auto",
-        maxWidth: "75px",
+        maxWidth: "70px",
         height: "30px",
         padding: "0 12px",
 
