@@ -45,6 +45,13 @@ export const globalStyles = globalCss({
     fontSize: "14px",
     textTransform: "uppercase",
   },
+  h5: {
+    fontSize: "16px",
+    lineHeight: "24px",
+    letterSpacing: "0.2px",
+    fontWeight: "700",
+    color: "$neutralBlack",
+  },
 });
 
 export const Container = styled("div", {
