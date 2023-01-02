@@ -1,7 +1,7 @@
 import type { AppProps } from "next/app";
 import Image from "next/image";
 import { NavBar } from "../components/Navbar";
-import { Products } from "../components/Products";
+import { Sidebar } from "../components/Sidebar";
 
 import { Container, globalStyles } from "../styles/Global";
 
@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <Container>
         <NavBar />
-        <Products />
+        <Sidebar />
         <Component {...pageProps} />
       </Container>
     </>
