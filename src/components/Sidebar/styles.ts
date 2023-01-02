@@ -62,11 +62,6 @@ export const ButtonToggleAdd = styled(Toggle.Root, {
     backgroundColor: "$violet500",
     border: "1px solid $violet100",
   },
-  "&:focus::before": {
-    content: "|",
-    color: "red",
-    backgroundColor: "red",
-  },
 });
 
 export const ButtonToggle = styled(Toggle.Root, {
