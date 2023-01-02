@@ -5,9 +5,7 @@ import Image from "next/image";
 import { Navbar, LogoMark, NavbarLinksArea, InputArea, Input } from "./styles";
 
 import React from "react";
-import { styled } from "@stitches/react";
 import { MagnifyingGlass, Notebook } from "phosphor-react";
-import * as Separator from "@radix-ui/react-separator";
 
 export const NavBar = (): JSX.Element => {
   return (
