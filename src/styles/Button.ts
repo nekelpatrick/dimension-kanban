@@ -14,16 +14,25 @@ export const Button = styled("button", {
   variants: {
     type: {
       primary: {
-        // position: "absolute",
-        width: "57px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        marginRight: "6px",
+        fontSize: "12px",
+
+        fontFamily: "GT Walsheim Pro",
+
+        width: "auto",
+        maxWidth: "75px",
         height: "30px",
+        padding: "0 12px",
 
         border: "1px solid $gray500",
         borderRadius: "8px",
         boxShadow: "0 3px 0 0 #DFE1E4",
 
         transformStyle: "preserve-3d",
-        transition: "all 175ms cubic-bezier(0,0,1,1)",
+        transition: "all 75ms cubic-bezier(0,0,1,1)",
 
         background: "$neutralWhite",
         color: "$gray400",
