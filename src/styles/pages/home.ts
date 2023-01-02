@@ -26,13 +26,17 @@ export const BoardCardsArea = styled("div", {
 export const BoardColumn = styled("div", {
   display: "flex",
   flexDirection: "column",
+  alignItems: "center",
+
+  maxWidth: "244px",
+
   backgroundColor: "$gray-100",
   borderRadius: "$md",
   boxShadow: "$md",
   position: "relative",
   overflow: "hidden",
   height: "600px",
-  margin: "20px",
+  margin: "0 30px 0 24px",
 
   "&.isDraggingOver": {
     backgroundColor: "$green-100",
@@ -52,4 +56,20 @@ export const AddTaskButton = styled("button", {
 
 export const AddNewCard = styled("div", {
   padding: "$3",
+});
+
+export const ColumnHeader = styled("div", {
+  display: "flex",
+  alignItems: "center",
+  paddingBottom: "1rem",
+  flexDirection: "column",
+  maxWidth: "244px",
+});
+
+export const ColumnHeaderTitle = styled("div", {
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  width: "100%",
+  maxWidth: "244px",
 });
