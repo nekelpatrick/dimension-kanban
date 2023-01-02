@@ -24,7 +24,7 @@
         "id": 2,
         "title": "Moodboards",
         "description": "",
-        "embedImage": "https://picsum.photos/200/300",
+        "embedImage": "/static/cards/moodboardsImg.svg",
         "tag": "UI Design",
         "assignees": [
           {
@@ -48,7 +48,7 @@
         "id": 3,
         "title": "Dashboard Design",
         "description": "",
-        "embedImage": "https://picsum.photos/200/300",
+        "embedImage": "/static/cards/dashboardDesginImg.svg",
         "tag": "UI Design",
         "assignees": [
           {
