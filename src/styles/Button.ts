@@ -117,44 +117,6 @@ export const Button = styled("button", {
   },
 });
 
-export const ButtonToggle = styled(Toggle.Root, {
-  all: "unset",
-  height: 35,
-  width: 35,
-
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-
-  borderRadius: 8,
-  backgroundColor: "$gray600",
-
-  marginBottom: "16px",
-
-  "&:hover": { backgroundColor: "$violet500" },
-  "&[data-state=on]": {},
-  "&:focus": { backgroundColor: "$violet500", border: "1px solid $violet100" },
-});
-
-export const ButtonToggleAdd = styled(Toggle.Root, {
-  all: "unset",
-  height: 35,
-  width: 35,
-
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-
-  borderRadius: 8,
-  backgroundColor: "$gray600",
-
-  marginBottom: "16px",
-
-  "&:hover": { backgroundColor: "$violet500" },
-  "&[data-state=on]": {},
-  "&:focus": { backgroundColor: "$violet500", border: "1px solid $violet100" },
-});
-
 export const AddCardButton = styled("button", {
   display: "flex",
   justifyContent: "center",

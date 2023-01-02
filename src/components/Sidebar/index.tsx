@@ -1,6 +1,12 @@
-import { DashBar, LinksArea, SeparatorComponent } from "./styles";
+import {
+  AreaToggle,
+  ButtonToggle,
+  ButtonToggleAdd,
+  DashBar,
+  LinksArea,
+  SeparatorComponent,
+} from "./styles";
 
-import { ButtonToggle, ButtonToggleAdd } from "../../styles/Button";
 import Image from "next/image";
 
 import { Plus } from "phosphor-react";
@@ -10,14 +16,16 @@ export const Sidebar = (): JSX.Element => {
     <DashBar>
       <SeparatorComponent />
       <LinksArea>
-        <ButtonToggle>
-          <Image
-            src="/static/products/vector.svg"
-            width={24}
-            height={24}
-            alt=""
-          />
-        </ButtonToggle>
+        <AreaToggle>
+          <ButtonToggle>
+            <Image
+              src="/static/products/vector.svg"
+              width={24}
+              height={24}
+              alt=""
+            />
+          </ButtonToggle>
+        </AreaToggle>
         <ButtonToggle>
           <Image
             src="/static/products/dribbble.svg"

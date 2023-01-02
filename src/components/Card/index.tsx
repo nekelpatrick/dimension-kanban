@@ -2,6 +2,7 @@ import { Draggable } from "react-beautiful-dnd";
 
 import {
   AvatarArea,
+  AvatarImage,
   AvatarRoot,
   Card,
   CardContent,
@@ -12,13 +13,15 @@ import {
   FooterIconsArea,
   ProductCode,
   TagAssign,
+  AvatarFallback,
+  TitleAvatarExcessCount,
 } from "./styles";
 
 import Image from "next/image";
 
-import * as AvatarPrimitive from "@radix-ui/react-avatar";
-
 export const CardComponent = ({ data, index }: any) => {
+  const firstThreeAvatars = data.assignees.slice(0, 3);
+
   const getItemStyle = (isDragging: boolean, draggableStyle: any) => ({
     // some basic styles to make the items look a bit nicer
     userSelect: "none",
@@ -57,7 +60,6 @@ export const CardComponent = ({ data, index }: any) => {
                 justifyContent: "space-between",
               }}
             >
-              {" "}
               {data.tag.toLocaleLowerCase() == "research" ? (
                 <CardTag color="violet">
                   <CardTagText>{data.tag}</CardTagText>
@@ -73,18 +75,55 @@ export const CardComponent = ({ data, index }: any) => {
                   <CardTagText>{data.tag}</CardTagText>
                 </CardTag>
               ) : null}
-              {data.assignees.map((asst: any, index: any) => {
-                return (
-                  <AvatarArea key={index}>
-                    <AvatarRoot>
-                      <AvatarPrimitive.AvatarImage src={asst.avt} alt="" />
-                      <AvatarPrimitive.AvatarFallback
-                        delayMs={600}
-                      ></AvatarPrimitive.AvatarFallback>
+
+              {/* Avatar Area */}
+              <AvatarArea>
+                {data.assignees.length < 3
+                  ? data.assignees.map((asst: any, index: any) => {
+                      return (
+                        <AvatarRoot key={index}>
+                          <AvatarImage src={asst.avt} alt="" />
+                          <AvatarFallback delayMs={600}></AvatarFallback>
+                        </AvatarRoot>
+                      );
+                    })
+                  : firstThreeAvatars.map((asst: any, index: any) => {
+                      return (
+                        <AvatarRoot key={index}>
+                          <AvatarImage src={asst.avt} alt="" />
+                          <AvatarFallback delayMs={600}></AvatarFallback>
+                        </AvatarRoot>
+                      );
+                    })}
+
+                {data.assignees.length > 3 ? (
+                  <AvatarRoot exceeded="exceedCount" key={index}>
+                    <TitleAvatarExcessCount>
+                      {data.assignees.length - 3}{" "}
+                      <span
+                        style={{
+                          marginBottom: "2px",
+                        }}
+                      >
+                        +
+                      </span>
+                    </TitleAvatarExcessCount>
+
+                    <AvatarFallback delayMs={600}></AvatarFallback>
+                  </AvatarRoot>
+                ) : null}
+              </AvatarArea>
+
+              {/* data.assignees.map((asst: any, index: any) => {
+                  return (
+                    <AvatarRoot key={index}>
+                      <AvatarImage src={asst.avt} alt="" />
+                      <AvatarFallback delayMs={600}></AvatarFallback>
                     </AvatarRoot>
-                  </AvatarArea>
-                );
-              })}
+                  );
+                }) */}
+
+              {/* Avatar Area */}
             </TagAssign>
           </CardContent>
 

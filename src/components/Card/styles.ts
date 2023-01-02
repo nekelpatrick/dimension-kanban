@@ -1,5 +1,6 @@
 import { styled } from "../../styles/index";
 import * as AvatarPrimitive from "@radix-ui/react-avatar";
+import { relative } from "path";
 
 export const Card = styled("div", {
   boxSizing: "border-box",
@@ -134,25 +135,47 @@ export const FooterIconsArea = styled("span", {
 export const AvatarArea = styled(AvatarPrimitive.Root, {});
 
 export const AvatarRoot = styled(AvatarPrimitive.Root, {
-  display: "inline-flex",
+  position: "relative",
+
+  display: "inline-block",
   alignItems: "center",
   justifyContent: "center",
-  verticalAlign: "middle",
   overflow: "hidden",
   userSelect: "none",
+
   width: 30,
   height: 30,
 
   borderRadius: "100%",
   backgroundColor: "white",
   border: "1px solid #FFFFFF",
+
+  // "&:not(first-child)": {
+  //   marginLeft: "-80px",
+  // },
+
+  "&:nth-child(n+2)": {
+    marginLeft: "-10px",
+  },
+
+  variants: {
+    exceeded: {
+      exceedCount: {
+        alignItems: "center",
+        justifyContent: "center",
+        background: "#CBD2D9",
+      },
+    },
+  },
 });
 
 export const AvatarImage = styled(AvatarPrimitive.Image, {
+  display: "block",
   width: "100%",
   height: "100%",
   objectFit: "cover",
   borderRadius: "inherit",
+  margin: "0",
 });
 
 export const AvatarFallback = styled(AvatarPrimitive.Fallback, {
@@ -166,4 +189,17 @@ export const AvatarFallback = styled(AvatarPrimitive.Fallback, {
   fontSize: 15,
   lineHeight: 1,
   fontWeight: 500,
+});
+
+export const TitleAvatarExcessCount = styled("h5", {
+  width: "100%",
+  height: "100%",
+
+  fontWeight: "400",
+  lineHeight: "20px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+
+  color: "#656E77",
 });

@@ -3,6 +3,7 @@ import { Flex, Container } from "../../styles/Global";
 import { Button } from "../../styles/Button";
 
 import * as Separator from "@radix-ui/react-separator";
+import * as Toggle from "@radix-ui/react-toggle";
 
 export const DashBar = styled("div", {
   display: "flex",
@@ -39,4 +40,57 @@ export const SeparatorComponent = styled(Separator.Root, {
   // backgroundColor: "$gray600",
   borderBottom: "1px solid $gray600",
   "&[data-orientation=horizontal]": { height: 1, width: "32px" },
+});
+
+export const ButtonToggleAdd = styled(Toggle.Root, {
+  all: "unset",
+  height: 35,
+  width: 35,
+
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+
+  borderRadius: 8,
+  backgroundColor: "$gray600",
+
+  marginBottom: "16px",
+
+  "&:hover": { backgroundColor: "$violet500" },
+  "&[data-state=on]": {},
+  "&:focus": {
+    backgroundColor: "$violet500",
+    border: "1px solid $violet100",
+  },
+  "&:focus::before": {
+    content: "|",
+    color: "red",
+    backgroundColor: "red",
+  },
+});
+
+export const ButtonToggle = styled(Toggle.Root, {
+  all: "unset",
+  height: 35,
+  width: 35,
+
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+
+  borderRadius: 8,
+  backgroundColor: "$gray600",
+
+  marginBottom: "16px",
+
+  "&:hover": { backgroundColor: "$violet500" },
+  "&[data-state=on]": {},
+  "&:focus": { backgroundColor: "$violet500", border: "1px solid $violet100" },
+});
+
+export const AreaToggle = styled(Toggle.Root, {
+  all: "unset",
+
+  "&:focus": { backgroundColor: "$violet500", border: "1px solid $violet100" },
+  "&:focus::before": {},
 });
