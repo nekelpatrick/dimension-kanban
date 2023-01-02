@@ -11,6 +11,8 @@ import {
   ToolbarToggleGroup,
 } from "./styles";
 
+import { BiLink } from "react-icons/bi";
+
 import { Cloud, List, SquaresFour, Headphones, Link } from "phosphor-react";
 
 export const ToolbarComponent = () => {
@@ -70,7 +72,7 @@ export const ToolbarComponent = () => {
               <List />
             </span>
             <span style={{ color: "#DFE1E4", margin: "0 6px 0 6px" }}>|</span>
-            <SquaresFour weight="fill" />
+            <SquaresFour size={12} weight="fill" />
           </SwitchButton>
         ) : (
           <SwitchButton onClick={toggleIsList}>
@@ -87,7 +89,7 @@ export const ToolbarComponent = () => {
                 borderRadius: "5px",
               }}
             >
-              <SquaresFour weight="fill" />
+              <SquaresFour size={12} weight="fill" />
             </span>
           </SwitchButton>
         )}
@@ -96,9 +98,8 @@ export const ToolbarComponent = () => {
           <Headphones weight="bold" />
         </Button>
         <Button type="primary">
-          <span>
-            <Link weight="bold" /> Share
-          </span>
+          <BiLink style={{ margin: "0 " }} />
+          <span style={{ margin: "0", paddingLeft: "6.46px" }}>Share</span>
         </Button>
       </ToolbarToggleGroup>
     </ToolbarRoot>
