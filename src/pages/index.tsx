@@ -55,7 +55,6 @@ export function Home() {
   const [selectedBoard, setSelectedBoard] = useState(0);
   const [boardData, setBoardData] = useState(BoardData);
   const [showForm, setShowForm] = useState(false);
-  const [itemLength, setItemLength] = useState(2);
 
   const onDragEnd = (re: any) => {
     // check if there is no destination, then return early
@@ -120,6 +119,11 @@ export function Home() {
     }
   };
 
+  const countFilteredItemLength = (array: any[], name: string) => {
+    const filteredArray = array.filter((item) => item.name === name);
+    return filteredArray.reduce((acc, cur) => acc + cur.items.length, 0);
+  };
+
   return (
     <HomeContainer>
       <ToolbarComponent />
@@ -172,7 +176,6 @@ export function Home() {
                             {board.items.length}
                           </Button>
                         </div>
-
                         <span
                           style={{
                             display: "flex",
@@ -189,6 +192,7 @@ export function Home() {
                               alignItems: "center",
                             }}
                           >
+                            {/* <Plus size={12} weight="bold" color="#A9B4C0" /> */}
                             <Image
                               src={"/static/columns/plusIcon.svg"}
                               width={20}
@@ -386,11 +390,6 @@ export function Home() {
                               alignItems: "center",
                             }}
                           >
-                            {/* <DotsThree
-                              size={12}
-                              weight="bold"
-                              color="#A9B4C0"
-                            /> */}
                             <Image
                               src={"/static/columns/threeDotsIcon.svg"}
                               width={20}
