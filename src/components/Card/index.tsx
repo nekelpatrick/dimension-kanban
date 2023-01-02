@@ -156,6 +156,7 @@ export const CardComponent = ({ data, index }: any) => {
                     height={16}
                     width={16}
                     alt=""
+                    style={{ marginRight: "4px" }}
                   />
                   <p
                     style={{
