@@ -73,3 +73,24 @@ export const ColumnHeaderTitle = styled("div", {
   width: "100%",
   maxWidth: "244px",
 });
+
+export const InputNewCard = styled("textarea", {
+  all: "unset",
+  width: 200,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: 4,
+  padding: "0 10px",
+
+  fontSize: 13,
+  lineHeight: 1,
+
+  color: "$neutralBlack",
+
+  border: "1px solid $violet100",
+
+  backgroundColor: "$gray600",
+  boxShadow: `0 0 0 1px $neutralBlack`,
+  "&:focus": { boxShadow: `0 0 0 2px black` },
+});

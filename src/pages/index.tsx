@@ -8,6 +8,7 @@ import {
   ColumnArea,
   ColumnHeader,
   ColumnHeaderTitle,
+  InputNewCard,
 } from "../styles/pages/home";
 
 import { CardComponent } from "../components/Card";
@@ -28,14 +29,6 @@ import { BiBorderRadius } from "react-icons/bi";
 import Image from "next/image";
 import { AddCardButton, Button } from "../styles/Button";
 
-function createGuidId() {
-  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
-    var r = (Math.random() * 16) | 0,
-      v = c == "x" ? r : (r & 0x3) | 0x8;
-    return v.toString(16);
-  });
-}
-
 interface Item {
   id: number;
   title: string;
@@ -55,6 +48,21 @@ export function Home() {
   const [selectedBoard, setSelectedBoard] = useState(0);
   const [boardData, setBoardData] = useState(BoardData);
   const [showForm, setShowForm] = useState(false);
+
+  function getNextId(json: any): number {
+    // Find the highest id in the json
+    let highestId = 0;
+    json.forEach((section: any) => {
+      section.items.forEach((item: any) => {
+        if (item.id > highestId) {
+          highestId = item.id;
+        }
+      });
+    });
+
+    // Return the next id (one more than the highest id)
+    return highestId + 1;
+  }
 
   const onDragEnd = (re: any) => {
     // check if there is no destination, then return early
@@ -97,17 +105,17 @@ export function Home() {
       } else {
         const boardId = e.target.attributes["data-id"].value;
         const item: Item = {
-          id: Number(createGuidId()),
+          id: getNextId(boardData),
           title: val,
-          description: val,
-          embedImage: val,
-          tag: val,
+          description: "Add a description",
+          embedImage: "",
+          tag: "",
           assignees: [],
           chat: 0,
           attachment: 0,
           checkMarkCurrent: "",
           checkMarkGoal: "",
-          date: val,
+          date: "",
           done: false,
         };
         let newBoardData = boardData;
@@ -117,11 +125,6 @@ export function Home() {
         e.target.value = "";
       }
     }
-  };
-
-  const countFilteredItemLength = (array: any[], name: string) => {
-    const filteredArray = array.filter((item) => item.name === name);
-    return filteredArray.reduce((acc, cur) => acc + cur.items.length, 0);
   };
 
   return (
@@ -423,9 +426,9 @@ export function Home() {
                   </BoardCardsArea>
                   {showForm && selectedBoard === bIndex ? (
                     <AddNewCard className="p-3">
-                      <textarea
+                      <InputNewCard
                         rows={3}
-                        placeholder="Task info"
+                        placeholder="Task title"
                         data-id={bIndex}
                         onKeyDown={onTextAreaKeyPress}
                       />
