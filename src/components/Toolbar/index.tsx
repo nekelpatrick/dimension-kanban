@@ -99,7 +99,11 @@ export const ToolbarComponent = () => {
         </Button>
         <Button type="primary">
           <BiLink style={{ margin: "0 " }} />
-          <span style={{ margin: "0", paddingLeft: "6.46px" }}>Share</span>
+          <span
+            style={{ margin: "0", paddingLeft: "6.46px", fontSize: "12px" }}
+          >
+            Share
+          </span>
         </Button>
       </ToolbarToggleGroup>
     </ToolbarRoot>
