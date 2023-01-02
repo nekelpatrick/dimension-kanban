@@ -5,9 +5,10 @@ export const Card = styled("div", {
   boxSizing: "border-box",
   display: "flex",
   flexDirection: "column",
-  alignItems: "flex-start",
-  padding: "34px 0px 12px 0",
-  // gap: "12px",
+
+  justifyContent: "center",
+  alignItems: "center",
+
   width: "244px",
   maxHeight: "260px",
   background: "#FFFFFF",
@@ -19,17 +20,29 @@ export const Card = styled("div", {
   flexGrow: 0,
   zIndex: 1,
   margin: "24px 0 24px 0",
+
+  gap: "6px",
+});
+
+export const CardContent = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignContent: "center",
+  // alignItems: "center",
+  width: "212px",
+
+  margin: "6px 16px 12px 16x",
 });
 
 export const ProductCode = styled("div", {
+  display: "flex",
   fontWeight: "400",
   fontSize: "10px",
   lineHeight: "24px",
   letterSpacing: "0.6px",
   color: "#7F8995",
 });
-
-export const CardContent = styled("div", {});
 
 export const CardDescription = styled("p", {
   fontWeight: "400",
@@ -39,7 +52,15 @@ export const CardDescription = styled("p", {
   color: "#7f8995",
 });
 
-export const CardTag = styled("label", {
+export const TagAssign = styled("span", {
+  display: "flex",
+  justifyContent: "space-between",
+  margin: "12px 0 0 0",
+});
+
+export const CardTag = styled("span", {
+  padding: "0",
+  margin: "0",
   variants: {
     color: {
       green: {
@@ -61,7 +82,6 @@ export const CardTag = styled("label", {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",
-  padding: "4px 8px",
   gap: "8px",
 
   width: "69px",
@@ -78,7 +98,32 @@ export const CardTagText = styled("p", {
   letterSpacing: "0.2px",
 });
 
-export const CardFooter = styled("div", {});
+export const CardFooter = styled("div", {
+  // width: "244px",
+  width: "100%",
+  display: "flex",
+  justifyContent: "space-between",
+  borderTop: "1px solid #EAEDF0",
+});
+
+export const FooterIconsArea = styled("span", {
+  margin: "12px 0 12px 16px",
+
+  display: "flex",
+  flexDirection: "row",
+
+  "> span": {
+    display: "flex",
+    flexDirection: "row",
+
+    marginRight: "8px",
+    fontSize: "12px",
+    letterSpacing: "0.2px",
+    color: "#98a5b3",
+  },
+});
+
+export const AvatarArea = styled(AvatarPrimitive.Root, {});
 
 export const AvatarRoot = styled(AvatarPrimitive.Root, {
   display: "inline-flex",
@@ -89,6 +134,7 @@ export const AvatarRoot = styled(AvatarPrimitive.Root, {
   userSelect: "none",
   width: 30,
   height: 30,
+
   borderRadius: "100%",
   backgroundColor: "white",
   border: "1px solid #FFFFFF",
@@ -107,8 +153,8 @@ export const AvatarFallback = styled(AvatarPrimitive.Fallback, {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  backgroundColor: "white",
-  color: "white",
+  backgroundColor: "$gray600",
+  color: "red",
   fontSize: 15,
   lineHeight: 1,
   fontWeight: 500,
