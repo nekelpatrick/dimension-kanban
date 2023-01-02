@@ -79,6 +79,7 @@ export const CardComponent = ({ data, index }: any) => {
                     height={16}
                     width={16}
                     alt=""
+                    style={{ marginRight: "4px" }}
                   />
                   <span>{data.chat} </span>
                 </span>
@@ -90,6 +91,7 @@ export const CardComponent = ({ data, index }: any) => {
                     height={16}
                     width={16}
                     alt=""
+                    style={{ marginRight: "4px" }}
                   />
                   <span>
                     {data.checkMarkCurrent}/{data.checkMarkGoal}
@@ -103,6 +105,7 @@ export const CardComponent = ({ data, index }: any) => {
                     height={16}
                     width={16}
                     alt=""
+                    style={{ marginRight: "4px" }}
                   />
                   <span>{data.attachment} </span>
                 </span>
@@ -126,6 +129,7 @@ export const CardComponent = ({ data, index }: any) => {
                     height={16}
                     width={16}
                     alt=""
+                    style={{ marginRight: "4px" }}
                   />
                   <p
                     style={{
