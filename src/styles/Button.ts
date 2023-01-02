@@ -18,7 +18,7 @@ export const Button = styled("button", {
         justifyContent: "center",
         alignItems: "center",
         marginRight: "6px",
-        fontSize: "12px",
+        fontSize: "14px",
 
         fontFamily: "GT Walsheim Pro",
 
