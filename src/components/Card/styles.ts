@@ -6,7 +6,7 @@ export const Card = styled("div", {
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
-  padding: "34px 0px 12px",
+  padding: "34px 0px 12px 0",
   // gap: "12px",
   width: "244px",
   maxHeight: "238px",

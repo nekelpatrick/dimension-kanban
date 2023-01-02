@@ -37,8 +37,13 @@ export const globalStyles = globalCss({
   },
 
   "h1,h2,h3,h4,h5": {
-    fontFamily: "GT Walsheim PRO",
+    fontFamily: "GT Walsheim Pro",
     fontWeight: 700,
+  },
+  h4: {
+    fontWeight: 700,
+    fontSize: "14px",
+    textTransform: "uppercase",
   },
 });
 
