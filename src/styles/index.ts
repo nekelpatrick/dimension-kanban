@@ -26,6 +26,9 @@ export const {
 
       neutralBlack: "#111118",
       neutralWhite: "#FFFFFF",
+
+      violet500: "#533be50d",
+      violet100: "#533BE5",
     },
     fonts: {
       titles: "GT Walsheim pro, sans-serif;",

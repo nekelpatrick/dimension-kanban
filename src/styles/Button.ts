@@ -1,4 +1,5 @@
 import { styled } from "../styles/index";
+import * as Toggle from "@radix-ui/react-toggle";
 
 export const Button = styled("button", {
   all: "unset",
@@ -105,6 +106,51 @@ export const Button = styled("button", {
         borderRadius: "8px",
         border: "1px solid $gray500",
       },
+      sideBarButton: {
+        height: "32px",
+        width: "32px",
+
+        borderRadius: "8px",
+        border: "1px solid $gray500",
+      },
     },
   },
+});
+
+export const ButtonToggle = styled(Toggle.Root, {
+  all: "unset",
+  height: 35,
+  width: 35,
+
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+
+  borderRadius: 8,
+  backgroundColor: "$gray600",
+
+  marginBottom: "16px",
+
+  "&:hover": { backgroundColor: "$violet500" },
+  "&[data-state=on]": {},
+  "&:focus": { backgroundColor: "$violet500", border: "1px solid $violet100" },
+});
+
+export const ButtonToggleAdd = styled(Toggle.Root, {
+  all: "unset",
+  height: 35,
+  width: 35,
+
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+
+  borderRadius: 8,
+  backgroundColor: "$gray600",
+
+  marginBottom: "16px",
+
+  "&:hover": { backgroundColor: "$violet500" },
+  "&[data-state=on]": {},
+  "&:focus": { backgroundColor: "$violet500", border: "1px solid $violet100" },
 });

@@ -3,11 +3,15 @@ import { Flex, Container } from "../../styles/Global";
 import { Button } from "../../styles/Button";
 
 export const Navbar = styled("nav", {
+  display: "flex",
   position: "fixed",
   inset: 0,
   bottom: "auto",
-  padding: "17px 0 17px 0",
   width: "100%",
+
+  height: "54px",
+  maxHeight: "54px",
+
   zIndex: "99999",
   borderBottom: "1px solid $gray600",
 
@@ -15,7 +19,7 @@ export const Navbar = styled("nav", {
 
   backgroundColor: "$neutralWhite",
 
-  display: "flex",
+  padding: "0 6px 0 6px",
 
   [`& ${Container}`]: {
     display: "flex",
@@ -28,14 +32,15 @@ export const Navbar = styled("nav", {
 });
 
 export const LogoMark = styled(Flex, {
-  paddingLeft: "6px",
   borderRight: "1px solid $gray550",
-  padding: "0 16px 11px 0",
-  marginLeft: "17px",
+  padding: "12px 15.5px 11px 0",
+  marginLeft: "11.5px",
   marginRight: "24px",
+  marginBottom: "0",
 });
 
 export const NavbarLinksArea = styled(Flex, {
+  margin: "0",
   "@mobile": {
     marginTop: "$3",
     flexDirection: "column",

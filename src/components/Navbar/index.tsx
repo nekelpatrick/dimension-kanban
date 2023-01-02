@@ -7,13 +7,14 @@ import { Navbar, LogoMark, NavbarLinksArea, InputArea, Input } from "./styles";
 import React from "react";
 import { styled } from "@stitches/react";
 import { MagnifyingGlass, Notebook } from "phosphor-react";
+import * as Separator from "@radix-ui/react-separator";
 
 export const NavBar = (): JSX.Element => {
   return (
     <Navbar>
       <NavbarLinksArea>
         <LogoMark>
-          <Image width={23} height={31} src={"/images/logoMark.png"} alt="" />
+          <Image width={23} height={31} src="/images/logoMark.png" alt="" />
         </LogoMark>
         <NavbarLinksArea>
           <Button type="navigationLinkCurrent">Projects</Button>
