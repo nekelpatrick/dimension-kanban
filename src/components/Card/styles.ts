@@ -22,6 +22,14 @@ export const Card = styled("div", {
   margin: "24px 0 24px 0",
 
   gap: "6px",
+
+  transition: "transform 0.3s ease",
+
+  "&:active": {
+    transform: "rotate(3deg)",
+    zIndex: 999,
+    boxShadow: "0 0 0 2px black,",
+  },
 });
 
 export const CardContent = styled("div", {

@@ -8,12 +8,13 @@ export const HomeContainer = styled("main", {
   bottom: "0",
   marginTop: "24px",
   marginLeft: "24px",
+  // marginBottom: "24px",
   // width: "100%",
 });
 
 export const ColumnArea = styled("div", {
   display: "flex",
-  maxHeight: "800px",
+  maxHeight: "100vh",
 });
 
 export const BoardCardsArea = styled("div", {
@@ -37,7 +38,9 @@ export const BoardColumn = styled("div", {
   overflow: "hidden",
   height: "600px",
   margin: "0 30px 0 24px",
+
   "&.isDraggingOver": {
+    padding: "1px",
     borderRadius: "12px",
     backgroundColor: "#F7F9FA",
   },
