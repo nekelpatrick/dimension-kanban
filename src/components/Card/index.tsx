@@ -53,6 +53,10 @@ export const CardComponent = ({ data, index }: any) => {
             <ProductCode>FLYTE-{data.id}</ProductCode>
             <h5 style={{ margin: "0 0 6px 0" }}>{data.title}</h5>
 
+            {data.embedImage ? (
+              <Image src={data.embedImage} width={212} height={88} alt="" />
+            ) : null}
+
             <CardDescription>{data.description}</CardDescription>
             <TagAssign
               style={{
