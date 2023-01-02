@@ -14,31 +14,12 @@
             "avt": "https://randomuser.me/api/portraits/men/50.jpg"
           }
         ],
-        "chat": 3
-      },
-
-      {
-        "id": 4,
-        "title": "Design System",
-        "description": "Create a consistent look and feel both on web and mobile",
-        "embedImage": "",
-        "tag": "UI Design",
-        "assignees": [
-          {
-            "avt": "https://randomuser.me/api/portraits/men/40.jpg"
-          }
-        ],
-        "chat": 12,
-        "checkMarkCurrent": 4,
-        "checkMarkGoal": 8,
-        "date": "May 20",
+        "chat": 3,
+        "checkMarkCurrent": "",
+        "checkMarkGoal": "",
+        "date": "",
         "done": false
-      }
-    ]
-  },
-  {
-    "name": "In Progress",
-    "items": [
+      },
       {
         "id": 2,
         "title": "Moodboards",
@@ -57,6 +38,28 @@
         "attachment": 2,
         "date": "Nov 23",
         "done": false
+      }
+    ]
+  },
+  {
+    "name": "In Progress",
+    "items": [
+      {
+        "id": 4,
+        "title": "Design System",
+        "description": "Create a consistent look and feel both on web and mobile",
+        "embedImage": "",
+        "tag": "UI Design",
+        "assignees": [
+          {
+            "avt": "https://randomuser.me/api/portraits/men/40.jpg"
+          }
+        ],
+        "chat": 12,
+        "checkMarkCurrent": "4",
+        "checkMarkGoal": "8",
+        "date": "May 20",
+        "done": false
       },
       {
         "id": 3,
@@ -72,8 +75,8 @@
           }
         ],
         "chat": 5,
-        "checkMarkCurrent": 4,
-        "checkMarkGoal": 8,
+        "checkMarkCurrent": "4",
+        "checkMarkGoal": "8",
         "attachment": 1,
         "date": "Jun 20",
         "done": false
@@ -108,8 +111,7 @@
         "tag": "Research",
         "assignees": [
           {
-            "avt": "https://randomuser.me/api/portraits/men/75.jpg",
-            "avt": "https://randomuser.me/api/portraits/men/77.jpg"
+            "avt": "https://randomuser.me/api/portraits/men/75.jpg"
           }
         ],
         "chat": 12,
