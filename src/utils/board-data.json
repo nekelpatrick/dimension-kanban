@@ -10,14 +10,14 @@
         "tag": "Research",
         "assignees": [
           {
-            "avt": "https://randomuser.me/api/portraits/men/40.jpg",
-            "avt": "https://randomuser.me/api/portraits/men/50.jpg"
+            "avt": "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
+            "avt": "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80"
           }
         ],
         "chat": 3,
         "checkMarkCurrent": "",
         "checkMarkGoal": "",
-        "date": "",
+        "date": "Nov 23",
         "done": false
       },
       {
@@ -28,8 +28,8 @@
         "tag": "UI Design",
         "assignees": [
           {
-            "avt": "https://randomuser.me/api/portraits/men/40.jpg",
-            "avt": "https://randomuser.me/api/portraits/men/40.jpg"
+            "avt": "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
+            "avt": "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80"
           }
         ],
         "chat": 2,
@@ -45,23 +45,6 @@
     "name": "In Progress",
     "items": [
       {
-        "id": 4,
-        "title": "Design System",
-        "description": "Create a consistent look and feel both on web and mobile",
-        "embedImage": "",
-        "tag": "UI Design",
-        "assignees": [
-          {
-            "avt": "https://randomuser.me/api/portraits/men/40.jpg"
-          }
-        ],
-        "chat": 12,
-        "checkMarkCurrent": "4",
-        "checkMarkGoal": "8",
-        "date": "May 20",
-        "done": false
-      },
-      {
         "id": 3,
         "title": "Dashboard Design",
         "description": "",
@@ -69,9 +52,9 @@
         "tag": "UI Design",
         "assignees": [
           {
-            "avt": "https://randomuser.me/api/portraits/men/40.jpg",
-            "avt": "https://randomuser.me/api/portraits/men/40.jpg",
-            "avt": "https://randomuser.me/api/portraits/men/40.jpg"
+            "avt": "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
+            "avt": "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
+            "avt": "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80"
           }
         ],
         "chat": 5,
@@ -79,6 +62,23 @@
         "checkMarkGoal": "8",
         "attachment": 1,
         "date": "Jun 20",
+        "done": false
+      },
+      {
+        "id": 4,
+        "title": "Design System",
+        "description": "Create a consistent look and feel both on web and mobile",
+        "embedImage": "",
+        "tag": "UI Design",
+        "assignees": [
+          {
+            "avt": "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80"
+          }
+        ],
+        "chat": 12,
+        "checkMarkCurrent": "4",
+        "checkMarkGoal": "8",
+        "date": "May 20",
         "done": false
       }
     ]
@@ -94,7 +94,7 @@
         "tag": "Planning",
         "assignees": [
           {
-            "avt": "https://randomuser.me/api/portraits/men/75.jpg"
+            "avt": "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80"
           }
         ],
         "chat": 11,
@@ -111,7 +111,7 @@
         "tag": "Research",
         "assignees": [
           {
-            "avt": "https://randomuser.me/api/portraits/men/75.jpg"
+            "avt": "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80"
           }
         ],
         "chat": 12,
