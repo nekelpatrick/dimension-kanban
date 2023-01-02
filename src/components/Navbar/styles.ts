@@ -85,4 +85,6 @@ export const Input = styled("input", {
   color: "$gray400",
 
   fontSize: "12px",
+
+  // "&:focus": { boxShadow: `0 0 0 2px black` },
 });
