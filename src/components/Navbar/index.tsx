@@ -14,12 +14,7 @@ export const NavBar = (): JSX.Element => {
     <Navbar>
       <NavbarLinksArea>
         <LogoMark>
-          <Image
-            width={23}
-            height={31}
-            src="/images/static/logoMark.svg"
-            alt=""
-          />
+          <Image width={23} height={31} src="/static/logoMark.svg" alt="" />
         </LogoMark>
         <NavbarLinksArea>
           <Button type="navigationLinkCurrent">Projects</Button>

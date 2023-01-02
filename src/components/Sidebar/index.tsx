@@ -12,7 +12,7 @@ export const Sidebar = (): JSX.Element => {
       <LinksArea>
         <ButtonToggle>
           <Image
-            src="/images/static/products/vector.svg"
+            src="/static/products/vector.svg"
             width={24}
             height={24}
             alt=""
@@ -20,7 +20,7 @@ export const Sidebar = (): JSX.Element => {
         </ButtonToggle>
         <ButtonToggle>
           <Image
-            src="/images/static/products/dribbble.svg"
+            src="/static/products/dribbble.svg"
             width={24}
             height={24}
             alt=""
@@ -28,7 +28,7 @@ export const Sidebar = (): JSX.Element => {
         </ButtonToggle>
         <ButtonToggle>
           <Image
-            src="/images/static/products/buymeacoffee.svg"
+            src="/static/products/buymeacoffee.svg"
             width={24}
             height={24}
             alt=""
@@ -37,7 +37,7 @@ export const Sidebar = (): JSX.Element => {
 
         <ButtonToggle>
           <Image
-            src="/images/static/products/atlassian.svg"
+            src="/static/products/atlassian.svg"
             width={24}
             height={24}
             alt=""
