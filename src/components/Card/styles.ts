@@ -19,7 +19,7 @@ export const Card = styled("div", {
   order: 0,
   alignSelf: "stretch",
   flexGrow: 0,
-  zIndex: 1,
+  zIndex: 5,
   margin: "24px 0 24px 0",
 
   gap: "6px",
@@ -31,6 +31,20 @@ export const Card = styled("div", {
     // zIndex: 999,
     // boxShadow: "0 0 0 2px black,",
   },
+});
+
+export const CardUnder = styled("div", {
+  display: "block",
+  zIndex: -999,
+  position: "relative",
+  width: "236px",
+  height: "10px",
+  background: "#FFFFFF",
+  borderRight: "1px solid #EAEDF0",
+  borderLeft: "1px solid #EAEDF0",
+  borderBottom: "1px solid #EAEDF0",
+  borderRadius: "8px",
+  top: "4px",
 });
 
 export const CardContent = styled("div", {

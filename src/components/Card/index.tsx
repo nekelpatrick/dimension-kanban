@@ -15,6 +15,7 @@ import {
   TagAssign,
   AvatarFallback,
   TitleAvatarExcessCount,
+  CardUnder,
 } from "./styles";
 
 import Image from "next/image";
@@ -27,7 +28,7 @@ export const CardComponent = ({ data, index }: any) => {
     userSelect: "none",
 
     // change background colour if dragging
-    background: isDragging ? "#F4F4F4" : "#FFFFFF",
+    // background: isDragging ? "#F4F4F4" : "#FFFFFF",
     transform: "rotate(3deg)",
     zIndex: 999,
     boxShadow: "0 0 0 2px black,",
@@ -235,6 +236,7 @@ export const CardComponent = ({ data, index }: any) => {
               )}
             </span>
           </CardFooter>
+          <CardUnder />
         </Card>
       )}
     </Draggable>
