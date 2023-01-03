@@ -39,11 +39,11 @@ export const BoardColumn = styled("div", {
   height: "600px",
   margin: "0 12px 0 24px",
 
-  "&.isDraggingOver": {
-    padding: "1px",
-    borderRadius: "12px",
-    backgroundColor: "#F7F9FA",
-  },
+  // "&.isDraggingOver": {
+  //   padding: "1px",
+  //   borderRadius: "12px",
+  //   backgroundColor: "#F7F9FA",
+  // },
 });
 
 export const AddTaskButton = styled("button", {
@@ -99,4 +99,10 @@ export const InputNewCard = styled("textarea", {
   backgroundColor: "$gray600",
   boxShadow: `0 0 0 1px $neutralBlack`,
   "&:focus": { boxShadow: `0 0 0 2px black` },
+});
+
+export const PlaceHolder = styled("div", {
+  position: "absolute",
+  backgroundColor: "#F7F9FA",
+  borderRadius: "8px",
 });

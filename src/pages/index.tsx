@@ -9,6 +9,7 @@ import {
   ColumnHeader,
   ColumnHeaderTitle,
   InputNewCard,
+  PlaceHolder,
 } from "../styles/pages/home";
 
 import { resetServerContext } from "react-beautiful-dnd";
@@ -19,11 +20,13 @@ import { DragDropContext, Droppable } from "react-beautiful-dnd";
 import BoardData from "../utils/board-data.json";
 import { useState } from "react";
 
-import { isEmpty } from "lodash";
-
 import { CircleDashed, CircleHalf, CheckCircle, Plus } from "phosphor-react";
 import Image from "next/image";
 import { AddCardButton, Button } from "../styles/Button";
+
+import { isEmpty } from "lodash";
+
+// import { NonNullable } from "ts-essentials";
 
 interface Item {
   id: number;
@@ -41,11 +44,11 @@ interface Item {
 }
 
 interface IPlaceholderProps {
-  clientY: number;
-  clientX: number;
-  clientHeight: number;
-  clientWeight: number;
-  clientWidth: number;
+  clientY?: number;
+  clientX?: number;
+  clientHeight?: number;
+  clientWeight?: number;
+  clientWidth?: number;
 }
 
 export function Home() {
@@ -55,13 +58,157 @@ export function Home() {
   const [boardData, setBoardData] = useState(BoardData);
   const [showForm, setShowForm] = useState(false);
 
-  const [listItems, updateListItems] = useState(boardData);
+  // queryAttr
 
   const queryAttr = "data-rbd-drag-handle-draggable-id";
+  const destinationQuertAttr = "data-rbd-droppable-id";
 
-  // const [placeholderProps, setPlaceholderProps] = useState(
-  //   {} as IPlaceholderProps
-  // );
+  const [placeholderProps, setPlaceholderProps] = useState<IPlaceholderProps>(
+    {}
+  );
+
+  // Drag functions -----
+
+  const getDraggedDom = (draggableId: any) => {
+    const domQuery = `[${queryAttr}='${draggableId}']`;
+    const draggedDOM = document.querySelector(domQuery);
+    return draggedDOM;
+  };
+
+  const getDestinationDom = (dropabbleId: any) => {
+    const domQuery = `[${destinationQuertAttr}='${dropabbleId}']`;
+    const destinationDOm = document.querySelector(domQuery);
+    return destinationDOm;
+  };
+
+  const handleDragStart = (event: any) => {
+    const draggedDOM = getDraggedDom(event.draggableId);
+
+    if (!draggedDOM) {
+      return;
+    }
+
+    if (draggedDOM.parentNode) {
+      const { clientHeight, clientWidth } = draggedDOM;
+      const sourceIndex = event.source.index;
+      var clientY =
+        parseFloat(window.getComputedStyle(draggedDOM.parentNode).paddingTop) +
+        [...draggedDOM.parentNode.children]
+          .slice(0, sourceIndex)
+          .reduce((total, curr) => {
+            const style = curr.currentStyle || window.getComputedStyle(curr);
+            const marginBottom = parseFloat(style.marginBottom);
+            return total + curr.clientHeight + marginBottom;
+          }, 0);
+
+      setPlaceholderProps({
+        clientHeight,
+        clientWidth,
+        clientY,
+        clientX: parseFloat(
+          window.getComputedStyle(draggedDOM.parentNode).paddingLeft
+        ),
+      });
+    }
+  };
+
+  const handleDragEnd = (result: any) => {
+    setPlaceholderProps({});
+
+    // dropped outside the list
+
+    if (!result.destination) {
+      return;
+    }
+
+    const sourceColumn = boardData.find((column) => {
+      return column.id === result.source.droppableId;
+    });
+    console.log(sourceColumn);
+
+    const destinationColumn = boardData.find((column) => {
+      return column.id === result.destination.droppableId;
+    });
+
+    if (sourceColumn && sourceColumn && destinationColumn) {
+      const draggedList = sourceColumn.items.find((column) => {
+        return column.id === result.draggableId;
+      });
+
+      const newListsColumn = [...boardData];
+
+      const destinationIndex = newListsColumn.indexOf(destinationColumn);
+      const sourceIndex = newListsColumn.indexOf(sourceColumn);
+
+      const newSourceLists = sourceColumn.items;
+      const newDestinationLists = destinationColumn.items;
+
+      if (draggedList) {
+        newSourceLists.splice(result.source.index, 1);
+        newDestinationLists.splice(result.destination.index, 0, draggedList);
+      }
+
+      newListsColumn[destinationIndex].items = newDestinationLists;
+      newListsColumn[sourceIndex].items = newSourceLists;
+      setBoardData(newListsColumn);
+    }
+  };
+
+  const handleDragUpdate = (event: any) => {
+    if (!event.destination) {
+      return;
+    }
+
+    const draggedDOM = getDraggedDom(event.draggableId);
+
+    if (!draggedDOM) {
+      return;
+    }
+
+    const { clientHeight, clientWidth } = draggedDOM;
+    const destinationIndex = event.destination.index;
+    const sourceIndex = event.source.index;
+
+    const childrenArray = [...draggedDOM.parentNode.children];
+    const movedItem = childrenArray[sourceIndex];
+    childrenArray.splice(sourceIndex, 1);
+
+    const droppedDom = getDestinationDom(event.destination.droppableId);
+    const destinationChildrenArray = [...droppedDom.children];
+    let updatedArray;
+    if (draggedDOM.parentNode === droppedDom) {
+      updatedArray = [
+        ...childrenArray.slice(0, destinationIndex),
+        movedItem,
+        ...childrenArray.slice(destinationIndex + 1),
+      ];
+    } else {
+      updatedArray = [
+        ...destinationChildrenArray.slice(0, destinationIndex),
+        movedItem,
+        ...destinationChildrenArray.slice(destinationIndex + 1),
+      ];
+    }
+
+    var clientY =
+      parseFloat(window.getComputedStyle(draggedDOM.parentNode).paddingTop) +
+      updatedArray.slice(0, destinationIndex).reduce((total, curr) => {
+        const style = curr.currentStyle || window.getComputedStyle(curr);
+        const marginBottom = parseFloat(style.marginBottom);
+        return total + curr.clientHeight + marginBottom;
+      }, 0);
+
+    setPlaceholderProps({
+      clientHeight,
+      clientWidth,
+      clientY,
+      clientX: parseFloat(
+        window.getComputedStyle(draggedDOM.parentNode).paddingLeft
+      ),
+    });
+  };
+
+  // ------
 
   function getNextId(json: any): number {
     // Find the highest id in the json
@@ -143,7 +290,11 @@ export function Home() {
   return (
     <HomeContainer>
       <ToolbarComponent />
-      <DragDropContext onDragEnd={onDragEnd}>
+      <DragDropContext
+        onDragEnd={onDragEnd}
+        onDragStart={handleDragStart}
+        onDragUpdate={handleDragUpdate}
+      >
         <ColumnArea>
           {boardData.map((board, bIndex) => (
             <Droppable key={board.name} droppableId={bIndex.toString()}>
@@ -460,9 +611,9 @@ export function Home() {
                       <span>Add task</span>
                     </AddCardButton>
                   )}
-
-                  {/* {!isEmpty(placeholderProps) && snapshot.isDraggingOver && (
-                    <div
+                  {provided.placeholder}
+                  {!isEmpty(placeholderProps) && snapshot.isDraggingOver && (
+                    <PlaceHolder
                       className="placeholder"
                       style={{
                         top: placeholderProps.clientY,
@@ -471,7 +622,9 @@ export function Home() {
                         width: placeholderProps.clientWidth,
                       }}
                     />
-                  )} */}
+                  )}
+
+                  {/* isEmpty Area */}
                 </BoardColumn>
               )}
             </Droppable>
