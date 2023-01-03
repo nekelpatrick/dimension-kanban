@@ -79,7 +79,16 @@ export const ButtonToggle = styled(Toggle.Root, {
   marginBottom: "16px",
 
   "&:hover": { backgroundColor: "$violet500" },
-  "&[data-state=on]": {},
+  "&[data-active=true]:before": {
+    content: "",
+    position: "absolute",
+    height: "100%",
+    width: "2px",
+    left: "-1%",
+    top: "0",
+    background: "$violet500",
+    borderRadius: "0 6px 6px 0",
+  },
   "&:focus": { backgroundColor: "$violet500", border: "1px solid $violet100" },
 });
 

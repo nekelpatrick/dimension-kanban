@@ -36,7 +36,7 @@ export const NavBar = (): JSX.Element => {
             height={16}
             src="/static/navbar/searchIcon.svg"
             alt=""
-            style={{ marginRight: "8px" }}
+            style={{ marginRight: "8px", marginLeft: "8px" }}
           />
           <Input type="text" id="search" placeholder="Search" />
         </InputArea>

@@ -69,12 +69,15 @@ export const ColumnHeader = styled("div", {
   maxWidth: "244px",
 });
 
-export const ColumnHeaderTitle = styled("div", {
+export const ColumnHeaderTitle = styled("h4", {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
   width: "100%",
   maxWidth: "244px",
+  fontWeight: 700,
+  fontSize: "14px",
+  textTransform: "uppercase",
 });
 
 export const InputNewCard = styled("textarea", {

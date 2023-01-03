@@ -70,7 +70,7 @@ export const InputArea = styled("div", {
   display: "inline-flex",
 
   alignItems: "center",
-  justifyContent: "center",
+  // justifyContent: "center",
 
   borderRadius: "8px",
   fontSize: 15,

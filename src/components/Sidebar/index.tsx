@@ -10,14 +10,20 @@ import {
 import Image from "next/image";
 
 import { Plus } from "phosphor-react";
+import { useState } from "react";
 
 export const Sidebar = (): JSX.Element => {
+  const [buttonActive, setButtonActive] = useState(false);
+
   return (
     <DashBar>
       <SeparatorComponent />
       <LinksArea>
         {/* <AreaToggle> */}
-        <ButtonToggle>
+        <ButtonToggle
+          onClick={() => setButtonActive(!buttonActive)}
+          data-active={buttonActive}
+        >
           <Image
             src="/static/products/vector.svg"
             width={24}
@@ -26,7 +32,7 @@ export const Sidebar = (): JSX.Element => {
           />
         </ButtonToggle>
         {/* </AreaToggle> */}
-        <ButtonToggle>
+        <ButtonToggle data-active={buttonActive}>
           <Image
             src="/static/products/dribbble.svg"
             width={24}
@@ -34,7 +40,7 @@ export const Sidebar = (): JSX.Element => {
             alt=""
           />
         </ButtonToggle>
-        <ButtonToggle>
+        <ButtonToggle data-active={buttonActive}>
           <Image
             src="/static/products/buymeacoffee.svg"
             width={24}
@@ -43,7 +49,7 @@ export const Sidebar = (): JSX.Element => {
           />
         </ButtonToggle>
 
-        <ButtonToggle>
+        <ButtonToggle data-active={buttonActive}>
           <Image
             src="/static/products/atlassian.svg"
             width={24}
@@ -52,7 +58,7 @@ export const Sidebar = (): JSX.Element => {
           />
         </ButtonToggle>
 
-        <ButtonToggleAdd>
+        <ButtonToggleAdd data-active={buttonActive}>
           <Plus color="#533BE5" weight="bold" size={18} />
         </ButtonToggleAdd>
       </LinksArea>

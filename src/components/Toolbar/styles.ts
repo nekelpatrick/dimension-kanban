@@ -136,10 +136,10 @@ export const SwitchButton = styled(Switch.Root, {
   fontFamily: "GT Walsheim Pro",
   fontSize: "12px",
 
-  width: "auto",
-  maxWidth: "75px",
+  width: "70px",
+  maxWidth: "70px",
   height: "30px",
-  padding: "0 12px",
+  padding: "0 6px",
 
   border: "1px solid $gray500",
   borderRadius: "8px",

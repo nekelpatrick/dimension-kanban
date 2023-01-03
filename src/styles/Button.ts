@@ -19,13 +19,16 @@ export const Button = styled("button", {
         justifyContent: "center",
         alignItems: "center",
         marginRight: "6px",
+
         fontSize: "14px",
+        lineHeight: "2px",
 
         fontFamily: "GT Walsheim Pro",
 
         width: "auto",
         maxWidth: "70px",
-        height: "30px",
+        height: "28px",
+        maxHeight: "30px",
         padding: "0 12px",
 
         border: "1px solid $gray500",
@@ -82,18 +85,21 @@ export const Button = styled("button", {
       navigationLink: {
         color: "$gray400",
         textDecoration: "none",
+        fontWeight: "500",
+        fontSize: "14px",
       },
       tag: {
         margin: "6px",
         width: "45px",
         height: "20px",
         borderRadius: "5px",
-        padding: "3px 6px ",
+        // padding: "3px 6px ",
         textAlign: "center",
 
         backgroundColor: "$gray590",
         color: "$gray400",
         fontWeight: "400",
+        fontSize: "12px",
       },
       sideButton: {
         display: "flex",
