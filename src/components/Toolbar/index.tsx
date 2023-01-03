@@ -10,10 +10,9 @@ import {
   ToolbarRoot,
   ToolbarToggleGroup,
 } from "./styles";
+import Image from "next/image";
 
-import { BiLink } from "react-icons/bi";
-
-import { Cloud, List, SquaresFour, Headphones, Link } from "phosphor-react";
+// import { BiLink } from "react-icons/bi";
 
 export const ToolbarComponent = () => {
   const [isList, setIsList] = useState(true);
@@ -29,9 +28,13 @@ export const ToolbarComponent = () => {
         aria-label="Text formatting"
       >
         <Button type="primary">
-          <span>
-            <Cloud color="#58B2CB" weight="fill" /> 25&#37;
-          </span>
+          <Image
+            width={18}
+            height={18}
+            src="/static/toolbar/cloudIcon.svg"
+            alt=""
+          />
+          <span style={{ marginLeft: "7.75px" }}>25&#37;</span>
         </Button>
         <Button type="primary">Filter</Button>
       </ToolbarToggleGroup>
@@ -71,14 +74,29 @@ export const ToolbarComponent = () => {
                 borderRadius: "5px",
               }}
             >
-              <List />
+              <Image
+                width={14}
+                height={14}
+                src="/static/toolbar/listIcon.svg"
+                alt=""
+              />
             </span>
             <span style={{ color: "#DFE1E4", margin: "0 6px 0 6px" }}>|</span>
-            <SquaresFour size={12} weight="fill" />
+            <Image
+              width={12}
+              height={12}
+              src="/static/toolbar/squareFourIcon.svg"
+              alt=""
+            />
           </SwitchButton>
         ) : (
           <SwitchButton onClick={toggleIsList}>
-            <List />
+            <Image
+              width={14}
+              height={14}
+              src="/static/toolbar/listIcon.svg"
+              alt=""
+            />
             <span style={{ color: "#DFE1E4", margin: "0 6px 0 6px" }}>|</span>
             <span
               style={{
@@ -91,16 +109,31 @@ export const ToolbarComponent = () => {
                 borderRadius: "5px",
               }}
             >
-              <SquaresFour size={12} weight="fill" />
+              <Image
+                width={12}
+                height={12}
+                src="/static/toolbar/squareFourIcon.svg"
+                alt=""
+              />
             </span>
           </SwitchButton>
         )}
         {/*  */}
         <Button type="primary">
-          <Headphones weight="bold" />
+          <Image
+            width={14}
+            height={14}
+            src="/static/toolbar/headphonesIcon.svg"
+            alt=""
+          />
         </Button>
         <Button type="primary">
-          <BiLink style={{ margin: "0 " }} />
+          <Image
+            width={12}
+            height={12}
+            src="/static/toolbar/linkIcon.svg"
+            alt=""
+          />
           <span
             style={{ margin: "0", paddingLeft: "6.46px", fontSize: "12px" }}
           >
