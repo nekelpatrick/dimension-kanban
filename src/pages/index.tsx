@@ -316,7 +316,7 @@ export function Home() {
                       </ColumnHeaderTitle>
                       <Image
                         style={{ marginTop: "16px" }}
-                        src="static/columns/separatorColumn.svg"
+                        src="static/columns/separatorColumnBlue.svg"
                         height={2}
                         width={244}
                         alt=""
@@ -407,7 +407,7 @@ export function Home() {
                       </ColumnHeaderTitle>
                       <Image
                         style={{ marginTop: "16px" }}
-                        src="static/columns/separatorColumn.svg"
+                        src="static/columns/separatorColumnGreen.svg"
                         height={2}
                         width={244}
                         alt=""
