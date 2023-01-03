@@ -103,6 +103,7 @@ export const InputNewCard = styled("textarea", {
 });
 
 export const PlaceHolder = styled("div", {
+  marginTop: "55px",
   position: "absolute",
   backgroundColor: "#F7F9FA",
   borderRadius: "8px",

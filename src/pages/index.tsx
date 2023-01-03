@@ -1,4 +1,4 @@
-// @ts-nocheck
+//@ts-nocheck
 
 import { ToolbarComponent } from "../components/Toolbar";
 import {
@@ -93,6 +93,7 @@ export function Home() {
     if (draggedDOM.parentNode) {
       const { clientHeight, clientWidth } = draggedDOM;
       const sourceIndex = event.source.index;
+
       var clientY =
         parseFloat(window.getComputedStyle(draggedDOM.parentNode).paddingTop) +
         [...draggedDOM.parentNode.children]
