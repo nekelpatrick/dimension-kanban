@@ -31,11 +31,22 @@ export const NavBar = (): JSX.Element => {
       </NavbarLinksArea>
       <NavbarLinksArea>
         <InputArea>
-          <MagnifyingGlass style={{ margin: 8 }} size={16} weight="bold" />
+          <Image
+            width={16}
+            height={16}
+            src="/static/navbar/searchIcon.svg"
+            alt=""
+            style={{ marginRight: "8px" }}
+          />
           <Input type="text" id="search" placeholder="Search" />
         </InputArea>
         <Button type="sideButton">
-          <Notebook size={16} />
+          <Image
+            width={16}
+            height={16}
+            src="/static/navbar/notebookIcon.svg"
+            alt=""
+          />
         </Button>
       </NavbarLinksArea>
     </Navbar>
