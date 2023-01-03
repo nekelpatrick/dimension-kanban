@@ -82,7 +82,7 @@ export const ToolbarButton = styled(
 
 export const ToolbarToggleGroup = styled(Toolbar.ToggleGroup, {
   ...itemStyles,
-  margin: "0 -13px 0 0",
+  margin: "0 10px 0 0",
   padding: "0",
   display: "flex",
 });
