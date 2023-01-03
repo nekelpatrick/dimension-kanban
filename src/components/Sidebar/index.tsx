@@ -16,16 +16,16 @@ export const Sidebar = (): JSX.Element => {
     <DashBar>
       <SeparatorComponent />
       <LinksArea>
-        <AreaToggle>
-          <ButtonToggle>
-            <Image
-              src="/static/products/vector.svg"
-              width={24}
-              height={24}
-              alt=""
-            />
-          </ButtonToggle>
-        </AreaToggle>
+        {/* <AreaToggle> */}
+        <ButtonToggle>
+          <Image
+            src="/static/products/vector.svg"
+            width={24}
+            height={24}
+            alt=""
+          />
+        </ButtonToggle>
+        {/* </AreaToggle> */}
         <ButtonToggle>
           <Image
             src="/static/products/dribbble.svg"
