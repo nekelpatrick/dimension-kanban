@@ -16,6 +16,7 @@ import {
   AvatarFallback,
   TitleAvatarExcessCount,
   CardUnder,
+  CardHeader,
 } from "./styles";
 
 import Image from "next/image";
@@ -52,13 +53,21 @@ export const CardComponent = ({ data, index }: any) => {
           {/* Card Content */}
           <CardContent>
             <ProductCode>FLYTE-{data.id}</ProductCode>
-            <h5 style={{ margin: "0 0 6px 0" }}>{data.title}</h5>
+            <CardHeader>{data.title}</CardHeader>
 
             {data.embedImage ? (
-              <Image src={data.embedImage} width={212} height={88} alt="" />
+              <Image
+                src={data.embedImage}
+                width={212}
+                height={88}
+                alt=""
+                style={{ marginBottom: "12px" }}
+              />
             ) : null}
 
-            <CardDescription>{data.description}</CardDescription>
+            {data.description ? (
+              <CardDescription>{data.description}</CardDescription>
+            ) : null}
             <TagAssign
               style={{
                 display: "flex",
@@ -118,15 +127,6 @@ export const CardComponent = ({ data, index }: any) => {
                   </AvatarRoot>
                 ) : null}
               </AvatarArea>
-
-              {/* data.assignees.map((asst: any, index: any) => {
-                  return (
-                    <AvatarRoot key={index}>
-                      <AvatarImage src={asst.avt} alt="" />
-                      <AvatarFallback delayMs={600}></AvatarFallback>
-                    </AvatarRoot>
-                  );
-                }) */}
 
               {/* Avatar Area */}
             </TagAssign>

@@ -422,10 +422,14 @@ export function Home() {
                           key={item.id}
                           data={item}
                           index={Index}
+                          className={`${
+                            snapshot.isDraggingOver && "isDraggingOver"
+                          }`}
                         />
                       ))}
                     {provided.placeholder}
                   </BoardCardsArea>
+
                   {showForm && selectedBoard === bIndex ? (
                     <AddNewCard className="p-3">
                       <InputNewCard

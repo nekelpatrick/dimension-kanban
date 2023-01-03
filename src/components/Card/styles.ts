@@ -22,7 +22,7 @@ export const Card = styled("div", {
   zIndex: 5,
   margin: "24px 0 24px 0",
 
-  gap: "6px",
+  // gap: "6px",
 
   transition: "transform 0.3s ease",
 
@@ -30,6 +30,12 @@ export const Card = styled("div", {
     // transform: "rotate(3deg)",
     // zIndex: 999,
     // boxShadow: "0 0 0 2px black,",
+  },
+
+  "&.isDraggingOver": {
+    padding: "1px",
+    borderRadius: "12px",
+    backgroundColor: "#F7F9FA",
   },
 });
 
@@ -67,18 +73,25 @@ export const ProductCode = styled("div", {
   color: "#7F8995",
 });
 
+export const CardHeader = styled("h5", {
+  margin: "0 0 6px 0",
+});
+
 export const CardDescription = styled("p", {
   fontWeight: "400",
   fontSize: "12px",
   lineHeight: "16px",
   letterSpacing: "0.2px",
   color: "#7f8995",
-});
 
-export const TagAssign = styled("span", {
+  marginBottom: "12px",
+});
+export const TagAssign = styled("div", {
   display: "flex",
+  alignItems: "center",
   justifyContent: "space-between",
-  margin: "12px 0 0 0",
+  marginBottom: "12px",
+  height: "30px",
 });
 
 export const CardTag = styled("span", {
@@ -105,7 +118,7 @@ export const CardTag = styled("span", {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",
-  gap: "8px",
+  // gap: "8px",
 
   width: "69px",
   height: "24px",
@@ -119,21 +132,26 @@ export const CardTagText = styled("p", {
   fontSize: "12px",
   lineHeight: "16px",
   letterSpacing: "0.2px",
+  margin: "0",
+  padding: "0",
 });
 
 export const CardFooter = styled("div", {
-  // width: "244px",
+  height: "40px",
   width: "100%",
   display: "flex",
   justifyContent: "space-between",
   borderTop: "1px solid #EAEDF0",
   marginBottom: "-20px",
+
+  alignItems: "center",
 });
 
 export const FooterIconsArea = styled("span", {
-  margin: "12px 0 12px 16px",
+  margin: "12px 8px 12px 8px",
 
   display: "flex",
+  alignItems: "center",
   flexDirection: "row",
 
   "> span": {
@@ -147,7 +165,9 @@ export const FooterIconsArea = styled("span", {
   },
 });
 
-export const AvatarArea = styled(AvatarPrimitive.Root, {});
+export const AvatarArea = styled(AvatarPrimitive.Root, {
+  margin: "0",
+});
 
 export const AvatarRoot = styled(AvatarPrimitive.Root, {
   position: "relative",
