@@ -128,6 +128,7 @@ export const AvatarFallback = styled(AvatarPrimitive.Fallback, {
 });
 
 export const SwitchButton = styled(Switch.Root, {
+  cursor: "pointer",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
