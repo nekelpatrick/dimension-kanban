@@ -407,7 +407,7 @@ export function Home() {
                       </ColumnHeaderTitle>
                       <Image
                         style={{ marginTop: "16px" }}
-                        src="static/columns/separatorColumnGreen.svg"
+                        src="static/columns/underlineSeparatorColumnGreen.svg"
                         height={2}
                         width={244}
                         alt=""
