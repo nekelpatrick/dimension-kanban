@@ -17,17 +17,11 @@ import { CardComponent } from "../components/Card";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 
 import BoardData from "../utils/board-data.json";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-import {
-  CircleDashed,
-  CircleHalf,
-  CheckCircle,
-  Plus,
-  DotsThree,
-} from "phosphor-react";
-import { Flex } from "../styles/Global";
-import { BiBorderRadius } from "react-icons/bi";
+import { isEmpty } from "lodash";
+
+import { CircleDashed, CircleHalf, CheckCircle, Plus } from "phosphor-react";
 import Image from "next/image";
 import { AddCardButton, Button } from "../styles/Button";
 
@@ -46,12 +40,28 @@ interface Item {
   done: boolean;
 }
 
+interface IPlaceholderProps {
+  clientY: number;
+  clientX: number;
+  clientHeight: number;
+  clientWeight: number;
+  clientWidth: number;
+}
+
 export function Home() {
   resetServerContext();
 
   const [selectedBoard, setSelectedBoard] = useState(0);
   const [boardData, setBoardData] = useState(BoardData);
   const [showForm, setShowForm] = useState(false);
+
+  const [listItems, updateListItems] = useState(boardData);
+
+  const queryAttr = "data-rbd-drag-handle-draggable-id";
+
+  // const [placeholderProps, setPlaceholderProps] = useState(
+  //   {} as IPlaceholderProps
+  // );
 
   function getNextId(json: any): number {
     // Find the highest id in the json
@@ -450,6 +460,18 @@ export function Home() {
                       <span>Add task</span>
                     </AddCardButton>
                   )}
+
+                  {/* {!isEmpty(placeholderProps) && snapshot.isDraggingOver && (
+                    <div
+                      className="placeholder"
+                      style={{
+                        top: placeholderProps.clientY,
+                        left: placeholderProps.clientX,
+                        height: placeholderProps.clientHeight,
+                        width: placeholderProps.clientWidth,
+                      }}
+                    />
+                  )} */}
                 </BoardColumn>
               )}
             </Droppable>

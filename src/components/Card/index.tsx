@@ -20,6 +20,7 @@ import {
 } from "./styles";
 
 import Image from "next/image";
+import { useState } from "react";
 
 export const CardComponent = ({ data, index }: any) => {
   const firstThreeAvatars = data.assignees.slice(0, 3);
