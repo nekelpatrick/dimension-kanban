@@ -57,6 +57,7 @@ export const ProductCode = styled("div", {
   lineHeight: "24px",
   letterSpacing: "0.6px",
   color: "#7F8995",
+  marginTop: "6px",
 });
 
 export const CardHeader = styled("h5", {
