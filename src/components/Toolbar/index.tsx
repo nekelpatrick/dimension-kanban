@@ -26,7 +26,6 @@ export const ToolbarComponent = () => {
     <ToolbarRoot>
       <ToolbarToggleGroup
         style={{ margin: "0 0 0 24px" }}
-        type="multiple"
         aria-label="Text formatting"
       >
         <Button type="primary">
@@ -37,7 +36,7 @@ export const ToolbarComponent = () => {
         <Button type="primary">Filter</Button>
       </ToolbarToggleGroup>
 
-      <ToolbarToggleGroup type="multiple" aria-label="Text formatting">
+      <ToolbarToggleGroup aria-label="Text formatting">
         <AvatarArea>
           <AvatarRoot>
             <AvatarImage

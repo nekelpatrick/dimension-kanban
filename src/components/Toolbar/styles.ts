@@ -4,7 +4,7 @@ import * as AvatarPrimitive from "@radix-ui/react-avatar";
 
 import * as Switch from "@radix-ui/react-switch";
 
-export const ToolbarRoot = styled(Toolbar.Root, {
+export const ToolbarRoot = styled("div", {
   position: "fixed",
   all: "unset",
   margin: "-25px 0 24px -2px",
@@ -38,7 +38,7 @@ export const itemStyles = {
   justifyContent: "center",
 };
 
-export const ToolbarToggleItem = styled(Toolbar.ToggleItem, {
+export const ToolbarToggleItem = styled("div", {
   ...itemStyles,
   backgroundColor: "white",
   marginLeft: 2,
@@ -49,14 +49,14 @@ export const ToolbarToggleItem = styled(Toolbar.ToggleItem, {
   },
 });
 
-export const ToolbarSeparator = styled(Toolbar.Separator, {
+export const ToolbarSeparator = styled("div", {
   width: 1,
 
   margin: "0 10px",
 });
 
 export const ToolbarLink = styled(
-  Toolbar.Link,
+  "button",
   {
     ...itemStyles,
     backgroundColor: "transparent",
@@ -69,7 +69,7 @@ export const ToolbarLink = styled(
 );
 
 export const ToolbarButton = styled(
-  Toolbar.Button,
+  "div",
   {
     ...itemStyles,
     paddingLeft: 10,
@@ -80,7 +80,7 @@ export const ToolbarButton = styled(
   // { "&:hover": { backgroundColor: violet.violet10 } }
 );
 
-export const ToolbarToggleGroup = styled(Toolbar.ToggleGroup, {
+export const ToolbarToggleGroup = styled("div", {
   ...itemStyles,
   margin: "0 10px 0 0",
   padding: "0",
@@ -88,7 +88,7 @@ export const ToolbarToggleGroup = styled(Toolbar.ToggleGroup, {
 });
 
 export const AvatarArea = styled(AvatarPrimitive.Root, {
-  margin: "16px",
+  marginRight: "16px",
 });
 
 export const AvatarRoot = styled(AvatarPrimitive.Root, {
@@ -101,7 +101,7 @@ export const AvatarRoot = styled(AvatarPrimitive.Root, {
   width: 28,
   height: 28,
 
-  margin: "4px",
+  marginLeft: "4px",
 
   borderRadius: "100%",
   backgroundColor: "$gray600",
