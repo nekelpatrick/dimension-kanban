@@ -8,7 +8,7 @@ export const ToolbarRoot = styled("div", {
   position: "fixed",
   all: "unset",
   margin: "-25px 0 24px -2px",
-  padding: "0 0 3px 0",
+  // padding: "0 0 3px 0",
 
   display: "flex",
   width: "100%",
