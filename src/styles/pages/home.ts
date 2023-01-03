@@ -7,7 +7,7 @@ export const HomeContainer = styled("main", {
   right: "0",
   bottom: "0",
   marginTop: "24px",
-  marginLeft: "24px",
+  // marginLeft: "24px",
   // marginBottom: "24px",
   // width: "100%",
 });

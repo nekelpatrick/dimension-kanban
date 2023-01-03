@@ -7,7 +7,7 @@ import * as Switch from "@radix-ui/react-switch";
 export const ToolbarRoot = styled(Toolbar.Root, {
   position: "fixed",
   all: "unset",
-  margin: "-10px 0 0 -25px",
+  margin: "-25px 0 24px -2px",
   padding: "0 0 3px 0",
 
   display: "flex",
@@ -18,7 +18,7 @@ export const ToolbarRoot = styled(Toolbar.Root, {
 
   flexDirection: "row",
   borderBottom: "1px solid $gray600",
-  marginBottom: "24px",
+  // marginBottom: "24px",
 
   justifyContent: "space-between",
   alignItems: "center",
