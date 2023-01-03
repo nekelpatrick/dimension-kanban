@@ -1,6 +1,7 @@
 import {
   AreaToggle,
   ButtonToggle,
+  ButtonToggleActive,
   ButtonToggleAdd,
   DashBar,
   LinksArea,
@@ -20,17 +21,14 @@ export const Sidebar = (): JSX.Element => {
       <SeparatorComponent />
       <LinksArea>
         {/* <AreaToggle> */}
-        <ButtonToggle
-          onClick={() => setButtonActive(!buttonActive)}
-          data-active={buttonActive}
-        >
+        <ButtonToggleActive style={{}} data-active={buttonActive}>
           <Image
             src="/static/products/vector.svg"
             width={24}
             height={24}
             alt=""
           />
-        </ButtonToggle>
+        </ButtonToggleActive>
         {/* </AreaToggle> */}
         <ButtonToggle data-active={buttonActive}>
           <Image

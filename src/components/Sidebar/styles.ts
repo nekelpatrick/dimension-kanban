@@ -79,14 +79,55 @@ export const ButtonToggle = styled(Toggle.Root, {
   marginBottom: "16px",
 
   "&:hover": { backgroundColor: "$violet500" },
-  "&[data-active=true]:before": {
+
+  // "&:before": {
+  //   content: "",
+  //   position: "absolute",
+  //   height: "23px",
+  //   width: "2px",
+  //   left: "0px",
+  //   // top: "0",
+  //   background: "$violet100",
+  //   borderRadius: "0 6px 6px 0",
+  // },
+
+  // "&[data-active='true']:before": {
+  //   content: "",
+  //   position: "absolute",
+  //   height: "5%",
+  //   width: "2px",
+  //   left: "0px",
+  //   // top: "0",
+  //   background: "$violet100",
+  //   borderRadius: "0 6px 6px 0",
+  // },
+  "&:focus": { backgroundColor: "$violet500", border: "1px solid $violet100" },
+});
+
+export const ButtonToggleActive = styled(Toggle.Root, {
+  all: "unset",
+  height: 35,
+  width: 35,
+
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+
+  borderRadius: 8,
+  backgroundColor: "$gray600",
+
+  marginBottom: "16px",
+
+  "&:hover": { backgroundColor: "$violet500" },
+
+  "&:before": {
     content: "",
     position: "absolute",
-    height: "100%",
+    height: "23px",
     width: "2px",
-    left: "-1%",
-    top: "0",
-    background: "$violet500",
+    left: "0px",
+    // top: "0",
+    background: "$violet100",
     borderRadius: "0 6px 6px 0",
   },
   "&:focus": { backgroundColor: "$violet500", border: "1px solid $violet100" },
