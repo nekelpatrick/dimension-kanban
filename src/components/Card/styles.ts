@@ -152,6 +152,9 @@ export const FooterIconsArea = styled("span", {
 });
 
 export const AvatarArea = styled(AvatarPrimitive.Root, {
+  display: "flex",
+  alignItems: "center",
+
   margin: "0",
 });
 
