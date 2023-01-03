@@ -5,16 +5,16 @@ import * as AvatarPrimitive from "@radix-ui/react-avatar";
 import * as Switch from "@radix-ui/react-switch";
 
 export const ToolbarRoot = styled(Toolbar.Root, {
+  position: "fixed",
   all: "unset",
-  margin: "0",
+  margin: "-10px 0 0 -25px",
+  padding: "0 0 3px 0",
 
   display: "flex",
   width: "100%",
   minWidth: "max-content",
 
   height: "48px",
-
-  paddingBottom: "3px",
 
   flexDirection: "row",
   borderBottom: "1px solid $gray600",
@@ -82,9 +82,8 @@ export const ToolbarButton = styled(
 
 export const ToolbarToggleGroup = styled(Toolbar.ToggleGroup, {
   ...itemStyles,
-  margin: "0 24px 0 0",
+  margin: "0 -13px 0 0",
   padding: "0",
-
   display: "flex",
 });
 

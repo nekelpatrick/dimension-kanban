@@ -24,7 +24,11 @@ export const ToolbarComponent = () => {
 
   return (
     <ToolbarRoot>
-      <ToolbarToggleGroup type="multiple" aria-label="Text formatting">
+      <ToolbarToggleGroup
+        style={{ margin: "0 0 0 24px" }}
+        type="multiple"
+        aria-label="Text formatting"
+      >
         <Button type="primary">
           <span>
             <Cloud color="#58B2CB" weight="fill" /> 25&#37;

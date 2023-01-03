@@ -37,7 +37,7 @@ export const BoardColumn = styled("div", {
   position: "relative",
   overflow: "hidden",
   height: "600px",
-  margin: "0 30px 0 24px",
+  margin: "0 12px 0 24px",
 
   "&.isDraggingOver": {
     padding: "1px",
