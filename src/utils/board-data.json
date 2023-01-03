@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "name": "TODO",
     "items": [
       {
@@ -46,6 +47,7 @@
     ]
   },
   {
+    "id": 2,
     "name": "In Progress",
     "items": [
       {
@@ -107,6 +109,7 @@
     ]
   },
   {
+    "id": 3,
     "name": "Completed",
     "items": [
       {
