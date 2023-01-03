@@ -127,6 +127,7 @@ export const CardFooter = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   borderTop: "1px solid #EAEDF0",
+  marginBottom: "-20px",
 });
 
 export const FooterIconsArea = styled("span", {
