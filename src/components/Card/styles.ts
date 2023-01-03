@@ -39,20 +39,6 @@ export const Card = styled("div", {
   },
 });
 
-export const CardUnder = styled("div", {
-  display: "block",
-  zIndex: -999,
-  position: "relative",
-  width: "236px",
-  height: "10px",
-  background: "#FFFFFF",
-  borderRight: "1px solid #EAEDF0",
-  borderLeft: "1px solid #EAEDF0",
-  borderBottom: "1px solid #EAEDF0",
-  borderRadius: "8px",
-  top: "4px",
-});
-
 export const CardContent = styled("div", {
   display: "flex",
   flexDirection: "column",
@@ -142,13 +128,13 @@ export const CardFooter = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   borderTop: "1px solid #EAEDF0",
-  marginBottom: "-20px",
+  marginBottom: "-8px",
 
   alignItems: "center",
 });
 
 export const FooterIconsArea = styled("span", {
-  margin: "12px 8px 12px 8px",
+  margin: "0 16px",
 
   display: "flex",
   alignItems: "center",
@@ -237,4 +223,18 @@ export const TitleAvatarExcessCount = styled("h5", {
   justifyContent: "center",
 
   color: "#656E77",
+});
+
+export const CardUnder = styled("div", {
+  display: "block",
+  zIndex: -999,
+  position: "relative",
+  width: "236px",
+  height: "8px",
+  background: "#FFFFFF",
+  borderRight: "1px solid #EAEDF0",
+  borderLeft: "1px solid #EAEDF0",
+  borderBottom: "1px solid #EAEDF0",
+  borderRadius: "8px",
+  top: "4px",
 });
