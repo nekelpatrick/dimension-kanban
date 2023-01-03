@@ -20,7 +20,7 @@ export const Card = styled("div", {
   alignSelf: "stretch",
   flexGrow: 0,
   zIndex: 5,
-  margin: "24px 0 24px 0",
+  margin: "0 0 24px 0",
 
   // gap: "6px",
 

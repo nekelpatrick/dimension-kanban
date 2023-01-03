@@ -64,7 +64,7 @@ export const AddNewCard = styled("div", {
 export const ColumnHeader = styled("div", {
   display: "flex",
   alignItems: "center",
-  paddingBottom: "1rem",
+  paddingBottom: "1.5rem",
   flexDirection: "column",
   maxWidth: "244px",
 });
