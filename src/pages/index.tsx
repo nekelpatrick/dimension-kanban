@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { ToolbarComponent } from "../components/Toolbar";
 import {
   AddNewCard,
@@ -72,7 +74,7 @@ export function Home() {
   const getDraggedDom = (draggableId: any) => {
     const domQuery = `[${queryAttr}='${draggableId}']`;
     const draggedDOM = document.querySelector(domQuery);
-    return draggedDOM;
+    return draggedDOM as Element;
   };
 
   const getDestinationDom = (dropabbleId: any) => {
@@ -109,48 +111,6 @@ export function Home() {
           window.getComputedStyle(draggedDOM.parentNode).paddingLeft
         ),
       });
-    }
-  };
-
-  const handleDragEnd = (result: any) => {
-    setPlaceholderProps({});
-
-    // dropped outside the list
-
-    if (!result.destination) {
-      return;
-    }
-
-    const sourceColumn = boardData.find((column) => {
-      return column.id === result.source.droppableId;
-    });
-    console.log(sourceColumn);
-
-    const destinationColumn = boardData.find((column) => {
-      return column.id === result.destination.droppableId;
-    });
-
-    if (sourceColumn && sourceColumn && destinationColumn) {
-      const draggedList = sourceColumn.items.find((column) => {
-        return column.id === result.draggableId;
-      });
-
-      const newListsColumn = [...boardData];
-
-      const destinationIndex = newListsColumn.indexOf(destinationColumn);
-      const sourceIndex = newListsColumn.indexOf(sourceColumn);
-
-      const newSourceLists = sourceColumn.items;
-      const newDestinationLists = destinationColumn.items;
-
-      if (draggedList) {
-        newSourceLists.splice(result.source.index, 1);
-        newDestinationLists.splice(result.destination.index, 0, draggedList);
-      }
-
-      newListsColumn[destinationIndex].items = newDestinationLists;
-      newListsColumn[sourceIndex].items = newSourceLists;
-      setBoardData(newListsColumn);
     }
   };
 
@@ -254,9 +214,11 @@ export function Home() {
       dragItem
     );
 
+    setPlaceholderProps({});
     // update the board data
     setBoardData(currentBoardData);
   };
+
   const onTextAreaKeyPress = (e: any) => {
     if (e.keyCode === 13) {
       const val = e.target.value;

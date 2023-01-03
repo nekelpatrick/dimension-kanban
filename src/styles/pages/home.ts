@@ -22,6 +22,7 @@ export const BoardCardsArea = styled("div", {
   overflowX: "hidden",
   // height: "600px",
   // maxHeight: "calc(100vh - 290px)",
+  maxHeight: "90vh",
 });
 
 export const BoardColumn = styled("div", {
@@ -36,7 +37,7 @@ export const BoardColumn = styled("div", {
   boxShadow: "$md",
   position: "relative",
   overflow: "hidden",
-  height: "600px",
+  maxHeight: "70vh",
   margin: "0 12px 0 24px",
 
   // "&.isDraggingOver": {
@@ -50,7 +51,7 @@ export const AddTaskButton = styled("button", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  margin: "$3 0",
+  // margin: "3 0",
   fontSize: "$lg",
   "> span": {
     marginRight: "$2",
